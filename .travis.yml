@@ -3,9 +3,18 @@ rvm:
 - 2.6.5
 
 env:
-  - DB=postgresql
+- DB=postgresql
+
+services:
+- postgresql
+
+before_script:
+- bundle exec rails db:create
+- bundle exec rails db:migrate
+
 script:
-  - bundle install
-  - bundle exec rake db:create
-  - bundle exec rake db:migrate
-  - bundle exec rspec spec
+- bundle
+- bundle exec rspec
+- bundle exec rubocop
+
+after_script:
