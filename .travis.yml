@@ -7,6 +7,3 @@ env:
 script:
   - RAILS_ENV=test bundle exec rake db:create db:migrate --trace
   - bundle exec rspec test/
-before_script:
-  - mysql -e 'create database mydb_test'
-bundler_args: --binstubs=./bundler_stubs
