@@ -4,9 +4,3 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
-
-desc "builds the database, migrates and populates"
-task :build_db do
-  Rake::Task["db:create"].invoke
-  Rake::Task["db:migrate"].invoke
-end
