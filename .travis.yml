@@ -6,7 +6,7 @@ env:
   global:
   - CC_TEST_REPORTER_ID=6ff37add0aecefe2ddea29e8ebbb74798071c5c2fcf9cf90e27bdb89196896bb
 
-  services:
+services:
 - postgresql
 
 before_script:
@@ -18,9 +18,9 @@ before_script:
 - "./cc-test-reporter before-build"
 
 script:
-- bundle
-- bundle exec rspec
-- bundle exec rubocop
+  - bundle
+  - bundle exec rspec
+  - bundle exec rubocop
 
 branches:
   only:
