@@ -1,22 +1,24 @@
 language: ruby
 rvm:
 - 2.6.5
-
+env:
+  global:
+  - CC_TEST_REPORTER_ID=
 services:
 - postgresql
-
 before_script:
 - bundle exec rails db:create
 - bundle exec rails db:migrate
--
-
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+  > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- "./cc-test-reporter before-build"
 script:
 - bundle
 - bundle exec rspec
 - bundle exec rubocop
-
 branches:
   only:
   - master
-
 after_script:
+- "./cc-test-reporter after-build -t simplecov --exit-code $TRAVIS_TEST_RESULT"
