@@ -15,4 +15,8 @@ script:
 - bundle exec rspec
 - bundle exec rubocop
 
+branches:
+  only:
+  - master
+
 after_script:
