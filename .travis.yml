@@ -2,9 +2,6 @@ language: ruby
 rvm:
 - 2.6.5
 
-env:
-- DB=postgresql
-
 services:
 - postgresql
 
@@ -14,7 +11,5 @@ before_script:
 
 script:
 - bundle
-- bundle exec rspec
-- bundle exec rubocop
 
 after_script:
