@@ -8,8 +8,11 @@ services:
 before_script:
 - bundle exec rails db:create
 - bundle exec rails db:migrate
+-
 
 script:
 - bundle
+- bundle exec rspec
+- bundle exec rubocop
 
 after_script:
