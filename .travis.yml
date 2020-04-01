@@ -18,6 +18,10 @@ before_script:
 - chmod +x ./cc-test-reporter
 - "./cc-test-reporter before-build"
 
+cache:
+  yarn: true
+  bundler: true
+
 script:
   - bundle
   - bundle exec rspec
