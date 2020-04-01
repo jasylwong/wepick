@@ -18,6 +18,7 @@ before_script:
 - "./cc-test-reporter before-build"
 
 script:
+  - yarn install
   - bundle
   - bundle exec rspec
   - bundle exec rubocop
