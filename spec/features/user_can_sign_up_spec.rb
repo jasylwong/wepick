@@ -16,4 +16,13 @@ RSpec.feature "Sign up", type: :feature do
     sign_up("testexample.com", "example")
     expect(page).to have_content("Email is invalid")
   end
+
+  scenario "Users passwords do not match" do 
+    visit('/users/sign_up')
+    fill_in "user_email", with: "test@example.com"
+    fill_in "user_password", with: "password"
+    fill_in "user_password_confirmation", with: "password2"
+    click_button("Sign up")
+    expect(page).to have_content("Password confirmation doesn't match Password")
+  end 
 end 
