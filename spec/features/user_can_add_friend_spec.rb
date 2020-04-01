@@ -9,6 +9,7 @@ RSpec.feature 'adding friends', type: :feature do
     fill_in('Password confirmation', with: 'password')
     click_button 'Sign up'
     click_link('Add friend', match: :first)
-    expect(current_path).to eq('/friendships/index')    
+    expect(current_path).to eq('/friendships/show')
+    expect(page).to have_content('signin_test@example.com')    
   end
 end
