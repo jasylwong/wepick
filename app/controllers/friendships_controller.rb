@@ -1,12 +1,22 @@
 class FriendshipsController < ApplicationController
  
   def new
-    @user = current_user
+    @friendship = Friendship.new
+    @requesting_user = current_user
   end
 
   def create
-    @user.friend_request(User.find_by(id: params[:id]))
-    # redirect_to some_url
+    @requesting_user = current_user
+    @receiving_user = User.find_by(email: params[:email])
+    
+    @requesting_user.friend_request(@receiving_user)
+    @requesting_user.accept_request(@receiving_user)
+
+    # redirect_to pick a movie page
+  end
+
+  def index
+    @users = User.all
   end
 
 end
