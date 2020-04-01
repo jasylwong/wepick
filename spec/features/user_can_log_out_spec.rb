@@ -6,6 +6,4 @@ RSpec.feature "Log out", type: :feature do
     click_link("Sign Out")
     expect(current_path).to eq('/users/sign_in')
   end 
-
-  
 end
