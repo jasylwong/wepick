@@ -10,6 +10,7 @@ services:
 - postgresql
 
 before_script:
+- yarn install
 - bundle exec rails db:create
 - bundle exec rails db:migrate
 - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
@@ -18,7 +19,6 @@ before_script:
 - "./cc-test-reporter before-build"
 
 script:
-  - yarn install
   - bundle
   - bundle exec rspec
   - bundle exec rubocop
