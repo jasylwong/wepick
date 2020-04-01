@@ -11,4 +11,9 @@ RSpec.feature "Sign up", type: :feature do
     sign_up("test@example.com", "12345")
     expect(page).to have_content("Password is too short")
   end
+
+  scenario "User can't sign up with something other than an email address" do
+    sign_up("testexample.com", "example")
+    expect(page).to have_content("Email is invalid")
+  end
 end 
