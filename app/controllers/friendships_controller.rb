@@ -7,11 +7,11 @@ class FriendshipsController < ApplicationController
   end
 
   def new
-    @friendship = Friendship.new
+    @user = current_user
   end
 
   def create
-    @friendship = Friendship.create(friendship_params)
+    @user.friend_request(User.find_by(id: params[:id]))
     # redirect_to some_url
   end
 
@@ -21,9 +21,7 @@ class FriendshipsController < ApplicationController
   def update
   end
 
-  def destroy 
+  def destroy
   end
 
 end
-
-
