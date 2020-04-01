@@ -6,6 +6,6 @@
 <% @users.each do |u| %>
   <% if u.email != current_user.email %> 
     <%= u.email %> 
-    <%= link_to 'Add friend', '/friendships/new', method: :post %>
+    <%= link_to user_path(u), 'Add friend', '/friendships/new', method: :post %>
   <% end %>
 <% end %>

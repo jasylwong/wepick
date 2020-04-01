@@ -1,8 +1,7 @@
 class FriendshipsController < ApplicationController
  
   def new
-    @friendship = Friendship.new
-    @requesting_user = current_user
+    @friendship = Friendships.new
   end
 
   def create
@@ -12,7 +11,7 @@ class FriendshipsController < ApplicationController
     @requesting_user.friend_request(@receiving_user)
     @requesting_user.accept_request(@receiving_user)
 
-    # redirect_to pick a movie page
+    redirect_to '/friendships/index'
   end
 
   def index
