@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 # Use has_friendship for friendship relationships
 gem 'has_friendship'
+# Use faraday to make requests to external api
+gem 'faraday'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

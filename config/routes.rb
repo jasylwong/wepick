@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   root 'friendships#index'
   
   post '/friendships/new', to: 'friendships#create'
+
+  get "/movies" => "movies#test"
 end
