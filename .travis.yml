@@ -2,6 +2,11 @@ language: ruby
 rvm:
 - 2.6.5
 
+language: node_js
+node_js:
+  - "6"
+  - "4"
+
 env:
   global:
   - CC_TEST_REPORTER_ID=6ff37add0aecefe2ddea29e8ebbb74798071c5c2fcf9cf90e27bdb89196896bb
