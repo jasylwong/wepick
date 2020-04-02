@@ -1,11 +1,13 @@
-language: ruby
-rvm:
-- 2.6.5
+matrix:
+  include:
+    - language: node_js
+      node_js:
+        - 10
 
-language: node_js
-node_js:
-  - 10
-  
+    - language: ruby
+    rvm:
+     - 2.6.5
+
 
 env:
   global:
