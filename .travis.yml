@@ -4,6 +4,7 @@ rvm:
 
 env:
   global:
+  - RAILS_ENV=test 
   - CC_TEST_REPORTER_ID=6ff37add0aecefe2ddea29e8ebbb74798071c5c2fcf9cf90e27bdb89196896bb
 
 services:
@@ -17,8 +18,21 @@ before_script:
 - chmod +x ./cc-test-reporter
 - "./cc-test-reporter before-build"
 
+cache:
+  bundler: true
+  directories:
+    - node_modules
+  yarn: true
+
+install:
+  - bundle install
+  - nvm install node
+  - node -v
+  - npm i -g yarn
+  - yarn
+
 script:
-  - bundle
+  - bundle exec rails webpacker:compile
   - bundle exec rspec
   - bundle exec rubocop
 
