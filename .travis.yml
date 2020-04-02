@@ -16,12 +16,9 @@ before_script:
   > ./cc-test-reporter
 - chmod +x ./cc-test-reporter
 - "./cc-test-reporter before-build"
-- RAILS_ENV=test bundle exec rails webpacker:compile 
 
 script:
   - bundle
-  - bundle exec rspec
-  - bundle exec rubocop
 
 branches:
   only:
