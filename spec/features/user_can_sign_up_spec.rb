@@ -4,7 +4,7 @@ RSpec.feature "Sign up", type: :feature do
   
   scenario 'User can sign up' do
     sign_up("test@example.com", "example")
-    expect(current_path).to eq('/users') 
+    expect(current_path).to eq('/') 
   end
 
   scenario "User can't sign up with something with password less than 6 (inclusive) characters" do
