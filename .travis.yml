@@ -2,12 +2,11 @@ matrix:
   include:
     - language: node_js
       node_js:
-        - 10
+      - 10
 
     - language: ruby
-    rvm:
-     - 2.6.5
-
+      rvm:
+      - 2.6.5
 
 env:
   global:
