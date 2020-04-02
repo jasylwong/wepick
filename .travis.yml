@@ -10,17 +10,12 @@ services:
 - postgresql
 
 before_script:
-- yarn install
 - bundle exec rails db:create
 - bundle exec rails db:migrate
 - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
   > ./cc-test-reporter
 - chmod +x ./cc-test-reporter
 - "./cc-test-reporter before-build"
-
-cache:
-  yarn: true
-  bundler: true
 
 script:
   - bundle
