@@ -1,7 +1,6 @@
 class FriendshipsController < ApplicationController
 
   def new
-    @friendship = Friendships.new
   end
 
   def create
