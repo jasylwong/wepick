@@ -4,7 +4,7 @@ RSpec.feature "Sign up", type: :feature do
   
   scenario 'User can sign up' do
     sign_up("test@example.com", "example")
-    expect(current_path).to eq('/users') # this test is currently passing as we need to go to a new route not '/users'
+    expect(current_path).to eq('/users') 
   end
 
   scenario "User can't sign up with something with password less than 6 (inclusive) characters" do
