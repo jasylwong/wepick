@@ -496,3 +496,5 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
+Rails/SkipsModelValidations:
+  Enabled: false

@@ -21,8 +21,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# Use Devise
+# Use Devise for auth
 gem 'devise'
+# Use has_friendship for friendship relationships
+gem 'has_friendship'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
