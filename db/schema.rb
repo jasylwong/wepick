@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(version: 2020_04_03_141058) do
   end
 
   create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.string "overview"
+    t.string "imdb_id"
+    t.string "poster_path"
+    t.string "genre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

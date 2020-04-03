@@ -105,7 +105,7 @@ Style/NilComparison:
 Style/Not:
   Enabled: true
 Style/NumericLiterals:
-  Enabled: true
+  Enabled: false
 Style/NumericPredicate:
   Enabled: true
 Style/OneLineConditional:
