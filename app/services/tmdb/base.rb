@@ -1,4 +1,4 @@
-module Omdb
+module Tmdb
   class Base
     attr_accessor :errors
 

@@ -1,7 +1,7 @@
-module Omdb
+module Tmdb
   class Movie < Base
     attr_accessor :title,
-                  :poster,
+                  :poster_path,
                   :imdb_id
 
     def self.find(id)
