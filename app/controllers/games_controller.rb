@@ -4,7 +4,6 @@ class GamesController < ApplicationController
   end 
 
   def create
-    redirect_to '/games/index'
   end
 
   def index
