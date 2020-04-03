@@ -1,10 +1,10 @@
 module Tmdb
-  class Movie < Base
+  class Collection < Base
     attr_accessor :args
 
     def self.discover
       response = Request.get
-      Movie.new(response)
+      Collection.new(response)
     end
 
     def initialize(args = {})
