@@ -10,6 +10,7 @@ class Connection
       faraday.adapter Faraday.default_adapter
       faraday.headers['Content-Type'] = 'application/json'
       faraday.params['api_key'] = ENV['TMDB_KEY']
+      faraday.params["sort_by"] = "popularity.desc"
     end
   end
 end

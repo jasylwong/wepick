@@ -1,7 +1,7 @@
 class Request
   class << self
-    def get(id)
-      response, status = get_json("3/find/#{id}", { external_source: "imdb_id" })
+    def get
+      response, status = get_json("3/discover/movie", {})
       status == 200 ? response : errors(response)
     end
 
