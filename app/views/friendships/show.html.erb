@@ -2,4 +2,5 @@
 <h2>Choose one of your friends from the list below</h2>
 <% current_user.friends.to_a.each do |f| %>
   <%= f.email %>
+  <%= link_to 'Start Game', {controller: 'games', action: 'index'} %>
 <% end %> 
