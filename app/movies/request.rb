@@ -1,7 +1,7 @@
 class Request
   class << self
     def get(id)
-      response, status = get_json(id)
+      response, status = get_json("/", id)
       status == 200 ? response : errors(response)
     end
 
@@ -14,6 +14,7 @@ class Request
       query_string = query.map{|k,v| "#{k}=#{v}"}.join("&")
       path = query.empty? ? root_path : "#{root_path}?#{query_string}"
       response = api.get(path)
+
       [JSON.parse(response.body), response.status]
     end
 
