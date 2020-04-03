@@ -5,7 +5,7 @@ module Tmdb
                   :imdb_id
 
     def self.find(id)
-      response = Request.get({ i: id })
+      response = Request.get({ external_id: id })
       Movie.new(response)
     end
 

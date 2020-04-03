@@ -2,7 +2,7 @@ require 'faraday'
 require 'json'
 
 class Connection
-  BASE = 'https://api.themoviedb.org/3/movie'
+  BASE = 'https://api.themoviedb.org'
 
   def self.api
     Faraday.new(url: BASE) do |faraday|

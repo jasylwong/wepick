@@ -1,7 +1,7 @@
 class Request
   class << self
     def get(id)
-      response, status = get_json("/", id)
+      response, status = get_json("3/movie/find", id)
       status == 200 ? response : errors(response)
     end
 
