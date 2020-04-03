@@ -5,8 +5,8 @@ module Omdb
                   :imdb_id
 
     def self.find(id)
-    response = Request.get({i: id})
-     Movie.new(response)
+      response = Request.get({ i: id })
+      Movie.new(response)
     end
 
     def initialize(args = {})
