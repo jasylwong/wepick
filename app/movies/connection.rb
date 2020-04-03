@@ -9,7 +9,7 @@ class Connection
       faraday.response :logger
       faraday.adapter Faraday.default_adapter
       faraday.headers['Content-Type'] = 'application/json'
-      faraday.params['apikey'] = ENV['TMDB_KEY']
+      faraday.params['api_key'] = ENV['TMDB_KEY']
     end
   end
 end
