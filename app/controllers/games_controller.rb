@@ -15,6 +15,7 @@ class GamesController < ApplicationController
     p @@friend
   end
 
+  
   def show
   end 
 
