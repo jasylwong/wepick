@@ -1,7 +1,9 @@
 class GamesController < ApplicationController
 
+  @@friend = 0
+
   def new
-    @friend = params[:friend]
+    @@friend = params[:friend]
     redirect_to '/games'
   end 
 
@@ -10,10 +12,7 @@ class GamesController < ApplicationController
 
   def index
     @movie = Movie.find(current_user.movie_counter + 1)
-    p @receiving_user 
-    p "*****************"
-    p params[:friend]
-    p "%%%%%%%%%%%%%%%%%"
+    p @@friend
   end
 
   def show
