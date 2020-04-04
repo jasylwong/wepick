@@ -8,6 +8,8 @@ env:
 services:
 - postgresql
 before_script:
+- echo $RAILS_ENV
+- echo $TMDB_KEY
 - bundle exec rails db:create
 - bundle exec rails db:migrate
 - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
@@ -26,6 +28,8 @@ install:
 - npm i -g yarn
 - yarn
 script:
+- echo $RAILS_ENV
+- echo $TMDB_KEY
 - bundle exec rails webpacker:compile
 - bundle exec rspec
 - bundle exec rubocop
@@ -33,6 +37,8 @@ branches:
   only:
   - master
 after_script:
+- echo $RAILS_ENV
+- echo $TMDB_KEY
 - "./cc-test-reporter after-build -t simplecov --exit-code $TRAVIS_TEST_RESULT"
 deploy:
   provider: heroku
@@ -41,6 +47,8 @@ deploy:
   on:
     repo: jasylwong/wepick
   run:
+  - echo $RAILS_ENV
+  - echo $TMDB_KEY
   - bundle exec rails db:migrate
   - bundle exec rails db:seed
   api_key:
