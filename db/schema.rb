@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_03_141058) do
+ActiveRecord::Schema.define(version: 2020_04_04_095742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 2020_04_03_141058) do
     t.integer "blocker_id"
     t.integer "status"
     t.index ["friendable_id", "friend_id"], name: "index_friendships_on_friendable_id_and_friend_id", unique: true
+  end
+
+  create_table "movie_likes", force: :cascade do |t|
+    t.bigint "movie_id"
+    t.bigint "user_id"
+    t.index ["movie_id"], name: "index_movie_likes_on_movie_id"
+    t.index ["user_id"], name: "index_movie_likes_on_user_id"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -48,4 +55,6 @@ ActiveRecord::Schema.define(version: 2020_04_03_141058) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "movie_likes", "movies"
+  add_foreign_key "movie_likes", "users"
 end
