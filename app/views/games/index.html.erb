@@ -1,7 +1,7 @@
-Start Swiping
+<h1>Start Swiping</h1>
 
-<%= @testmovie.title %>
-<%= @testmovie.overview %>
+<h2><%= @testmovie.title %></h2>
+<div><%= @testmovie.overview %></div>
 <img src="https://image.tmdb.org/t/p/w500<%= @testmovie.poster_path%>" >
 
 
@@ -9,4 +9,3 @@ Start Swiping
 
 <%= button_to 'Like', games_like_path(:user_id => current_user.id), method: :post %>
 <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post %>
-
