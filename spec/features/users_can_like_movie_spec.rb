@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'liking movies', type: :feature do
   scenario 'User can like a movie' do
     User.create(email: 'signin_test@example.com', password: '123456')
-    Movie.create(title: 'Lion King', imdb_id: 'tt6105098')
+    Movie.create(id: 1, title: 'Lion King', imdb_id: 'tt6105098', overview: 'test description', poster_path: '/testposter.jpg')
     create_test_user_and_login('signin_test2@example.com', '123456')
     click_link('Add friend', match: :first)
     click_link("Start Game")

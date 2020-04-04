@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-RSpec.feature 'adding friends', type: :feature do
+RSpec.feature 'start game', type: :feature do
   scenario 'User can add friends' do
     User.create(email: 'signin_test@example.com', password: '123456')
+    Movie.create(id: 1, title: 'Lion King', imdb_id: 'tt6105098', overview: 'test description', poster_path: '/testposter.jpg')
     create_test_user_and_login('signin_test2@example.com', '123456')
     click_link('Add friend', match: :first)
     expect(current_path).to eq('/friendships/show')
