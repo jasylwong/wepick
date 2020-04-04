@@ -13,8 +13,8 @@ class GamesController < ApplicationController
   end 
 
   def like
-    movie_counter = User.find(params[:user_id]).movie_counter + 1
     MovieLike.create(user_id: params[:user_id])
+    movie_counter = current_user.movie_counter + 1
     User.where(id: params[:user_id]).update_all(movie_counter: movie_counter)
     redirect_to '/games'
   end
