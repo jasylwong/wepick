@@ -9,5 +9,6 @@ RSpec.feature 'liking movies', type: :feature do
     click_link("Start Game")
     click_button('Like')
     expect(MovieLike.count).to eq(1)
+    expect(User.find_by_email("signin_test2@example.com").movie_counter).to eq(1)
   end
 end
