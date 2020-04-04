@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2020_04_04_095742) do
   create_table "movie_likes", force: :cascade do |t|
     t.bigint "movie_id"
     t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["movie_id"], name: "index_movie_likes_on_movie_id"
     t.index ["user_id"], name: "index_movie_likes_on_user_id"
   end
@@ -49,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_04_04_095742) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "movie_counter", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
