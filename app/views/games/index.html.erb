@@ -1,11 +1,9 @@
 <h1>Start Swiping</h1>
 
-<h2><%= @testmovie.title %></h2>
-<div><%= @testmovie.overview %></div>
-<img src="https://image.tmdb.org/t/p/w500<%= @testmovie.poster_path%>" >
+<h2><%= @movie.title %></h2>
+<div><%= @movie.overview %></div>
+<img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path%>" >
 
 
-<br>
-
-<%= button_to 'Like', games_like_path(:user_id => current_user.id), method: :post %>
+<%= button_to 'Like', games_like_path(:user_id => current_user.id, :movie_id => @movie.id), method: :post %>
 <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post %>
