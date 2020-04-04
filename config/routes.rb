@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   root 'friendships#index'
   
   post '/games/like', to: 'games#like'
+  post '/games/dislike', to: 'games#dislike'
   post '/friendships/new', to: 'friendships#create'
   
 end

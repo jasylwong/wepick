@@ -4,4 +4,4 @@ Start Swiping
 
 
 <%= button_to 'Like', games_like_path(:user_id => current_user.id), method: :post %>
-<%= button_to 'Dislike', games_like_path(:user_id => current_user.id), method: :post %>
+<%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post %>

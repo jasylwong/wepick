@@ -19,4 +19,10 @@ class GamesController < ApplicationController
     redirect_to '/games'
   end
 
+  def dislike
+    movie_counter = current_user.movie_counter + 1
+    User.where(id: params[:user_id]).update_all(movie_counter: movie_counter)
+    redirect_to '/games'
+  end 
+
 end
