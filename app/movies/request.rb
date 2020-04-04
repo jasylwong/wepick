@@ -1,5 +1,10 @@
 class Request
   class << self
+    def get_by_id(id)
+      response, status = get_json("3/movie/#{id}", {})
+      status == 200 ? response : errors(response)
+    end
+    
     def get
       response, status = get_json("3/discover/movie", {})
       status == 200 ? response : errors(response)

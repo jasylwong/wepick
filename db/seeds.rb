@@ -17,5 +17,8 @@ genre_list =
 @collection.each do |movie|
   # Some movies have >1 genre. Have kept as an array in the tables so can still be manipulated easily.
   genres = movie["genre_ids"].map { |genre_id| genre_list[genre_id] }
+  # making a external request to find imdb id 
+  movie['imdb_id'] = Tmdb::Collection.find_by_id(movie["id"])["imdb_id"]
+
   Movie.create(title: movie["title"], overview: movie["overview"], imdb_id: movie["imdb_id"], poster_path: movie["poster_path"], genre: genres)
 end
