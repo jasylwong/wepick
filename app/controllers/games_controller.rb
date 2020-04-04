@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 
-  def new 
+  def new
   end 
 
   def create
@@ -11,5 +11,10 @@ class GamesController < ApplicationController
 
   def show
   end 
+
+  def like
+    MovieLike.create(user_id: params[:user_id])
+    redirect_to '/games'
+  end
 
 end
