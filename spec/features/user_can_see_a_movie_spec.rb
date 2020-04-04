@@ -13,4 +13,3 @@ RSpec.feature 'viewing movie', type: :feature do
     expect(page).to have_css("img[src*='/testposter.jpg']")
   end
 end
-
