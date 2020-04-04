@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   @@friend = 0
 
   def new
-    @@friend = params[:friend]
+    @@friend_id = params[:friend_id]
     redirect_to '/games'
   end 
 
@@ -12,10 +12,17 @@ class GamesController < ApplicationController
 
   def index
     @movie = Movie.find(current_user.movie_counter + 1)
-    p @@friend
+    
+    user_one_likes = !!MovieLike.find_by(user_id: current_user.id, movie_id: @movie.id - 1)
+    user_two_likes = !!MovieLike.find_by(user_id: @@friend_id, movie_id: @movie.id - 1)
+
+    if user_one_likes && user_two_likes 
+      @match = "You Matched"
+    else
+      @match = "" 
+    end
   end
 
-  
   def show
   end 
 
@@ -31,5 +38,4 @@ class GamesController < ApplicationController
     User.where(id: params[:user_id]).update_all(movie_counter: movie_counter)
     redirect_to '/games'
   end 
-
 end

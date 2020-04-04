@@ -13,4 +13,3 @@ RSpec.feature 'displaying match', type: :feature do
     expect(page).to have_content("You Matched")
   end 
 end
-
