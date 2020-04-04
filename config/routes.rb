@@ -8,10 +8,14 @@ Rails.application.routes.draw do
   end
   
   resources :users
-  resources :games
+  
+  resources :games do
+  end
 
   root 'friendships#index'
   
+  post '/games/like', to: 'games#like'
+  post '/games/dislike', to: 'games#dislike'
   post '/friendships/new', to: 'friendships#create'
   
 end

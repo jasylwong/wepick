@@ -1,4 +1,4 @@
-class MovieLikes < ActiveRecord::Migration[6.0]
+class CreateMovieLikes < ActiveRecord::Migration[6.0]
   def change
     create_table :movie_likes do |t|
 
