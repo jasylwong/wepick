@@ -8,8 +8,6 @@ class GamesController < ApplicationController
 
   def index
     @testmovie = Movie.find(1)
-    p @testmovie 
-    p "*********************"
   end
 
   def show
