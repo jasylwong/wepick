@@ -10,9 +10,6 @@ Rails.application.routes.draw do
   resources :users
   
   resources :games do
-    # member do
-    #   put "like" => "games#like"
-    # end
   end
 
   root 'friendships#index'
