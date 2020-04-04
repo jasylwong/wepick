@@ -7,7 +7,7 @@ class GamesController < ApplicationController
   end
 
   def index
-    @testmovie = Movie.find(1)
+    @testmovie = Movie.find(current_user.movie_counter + 1)
   end
 
   def show
