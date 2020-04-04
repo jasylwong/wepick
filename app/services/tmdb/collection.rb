@@ -2,8 +2,8 @@ module Tmdb
   class Collection < Base
     attr_accessor :args
 
-    def self.discover
-      response = Request.get
+    def self.discover(page_number)
+      response = Request.get(page_number)
       Collection.new(response)
     end
 
