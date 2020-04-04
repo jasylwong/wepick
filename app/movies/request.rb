@@ -6,7 +6,7 @@ class Request
     end
     
     def get(page_number)
-      response, status = get_json("3/discover/movie", {page: page_number})
+      response, status = get_json("3/discover/movie", { page: page_number })
       status == 200 ? response : errors(response)
     end
 

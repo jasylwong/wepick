@@ -12,17 +12,15 @@ genre_list = {  28 => "Action", 12 => "Adventure", 16 => "Animation", 35 => "Com
                 9648 => "Mystery", 10749 => "Romance", 878 => "Science Fiction", 
                 10770 => "TV Movie", 53 => "Thriller", 10752 => "War", 37 => "Western" }
 
+page = 1                
 20.times do
-  page = 1
   collection = Tmdb::Collection.discover(page).args["results"]
   collection.each do |movie|
     # Some movies have >1 genre. Have kept as an array in the tables so can still be manipulated easily.
     genres = movie["genre_ids"].map { |genre_id| genre_list[genre_id] }
     # making a external request to find imdb id 
-    movie['imdb_id'] = Tmdb::Collection.find_by_id(movie["id"])["imdb_id"]
+    movie['imdb_id'] = Tmdb::Collection.get_by_id(movie["id"])["imdb_id"]
     Movie.create(title: movie["title"], overview: movie["overview"], imdb_id: movie["imdb_id"], poster_path: movie["poster_path"], genre: genres)
   end
   page += 1
 end
-
-
