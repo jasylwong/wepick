@@ -13,4 +13,6 @@
   <% end %>
 <% end %>
 
-<%= link_to 'Go to friends list', '/friendships/show' %>
+<% if !current_user.friends.to_a.empty? %>
+  <%= link_to 'Go to friends list', '/friendships/show' %>
+<% end %>
