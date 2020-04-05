@@ -1,8 +1,10 @@
 <h1>Welcome</h1>
 <h2>Welcome <%= current_user.email %> to wepick</h2>
 
+<h3>Add a friend to your friends list</h3>
+
 <% @users.each do |u| %>
-  <% if u.email != current_user.email %>
+  <% if u.email != current_user.email && !current_user.friends_with?(u) %>
     <div>
       <%= u.email %>
       <%= link_to 'Add friend', friendships_new_path(:friend => u.id), method: :post %>
@@ -10,3 +12,5 @@
     <br>
   <% end %>
 <% end %>
+
+<%= link_to ''
