@@ -3,7 +3,10 @@
 
 <% @users.each do |u| %>
   <% if u.email != current_user.email %>
-    <%= u.email %>
-    <%= link_to 'Add friend', friendships_new_path(:friend => u.id), method: :post %>
+    <div>
+      <%= u.email %>
+      <%= link_to 'Add friend', friendships_new_path(:friend => u.id), method: :post %>
+    </div>
+    <br>
   <% end %>
 <% end %>
