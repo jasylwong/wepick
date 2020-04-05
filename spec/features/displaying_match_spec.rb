@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature 'displaying match', type: :feature do
-  scenario 'user can see a display messgae once matched' do 
+  scenario 'user can see a display message once matched' do 
     User.create(id: 1, email: 'signin_test@example.com', password: '123456')
     Movie.create(id: 1, title: 'Lion King', imdb_id: 'tt6105098', overview: 'test description', poster_path: '/testposter.jpg')
     Movie.create(id: 2, title: 'Aladdin', imdb_id: 'tt6105038', overview: 'test description', poster_path: '/testposter.jpg')
