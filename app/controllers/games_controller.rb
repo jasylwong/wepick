@@ -1,7 +1,5 @@
 class GamesController < ApplicationController
 
-  @@friend = 0
-
   def new
     @@friend_id = params[:friend_id]
     redirect_to '/games/preferences'
@@ -11,18 +9,21 @@ class GamesController < ApplicationController
   end
 
   def index
-    p "%#{params[:genre]}%"
-    @movie = Movie.where('genre LIKE ?', "%#{params[:genre]}%")
-    p @movie
+    session[:genre] = params[:genre] unless params[:genre] == nil
+    movies_by_genre = Movie.where('genre LIKE ?', "%#{session[:genre]}%").to_a
+    movies_id_arr = movies_by_genre.map do |movie|
+      movie.id
+    end
+    @movie = Movie.find(movies_id_arr[current_user.movie_counter])
 
-    # # @movie = Movie.find(current_user.movie_counter + 1)
+    # @movie = Movie.find(current_user.movie_counter + 1)
     # user_one_likes = find_likes(current_user.id, @movie.id)
     # user_two_likes = find_likes(@@friend_id, @movie.id)
     # print_match(user_one_likes, user_two_likes)
   end
 
   def preferences
-    
+
   end 
 
   def destroy

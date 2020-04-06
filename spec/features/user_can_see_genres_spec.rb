@@ -17,6 +17,7 @@ RSpec.feature 'Displaying genres', type: :feature do
     User.create(email: 'signin_test@example.com', password: '123456')
     Movie.create(id: 1, title: 'Lion King', genre: ['Family'])
     Movie.create(id: 2, title: 'Transformers', genre: ['Action'])
+    Movie.create(id: 3, title: 'James Bond', genre: ['Action'])
     create_test_user_and_login('signin_test2@example.com', '123456')
     click_link('Add friend', match: :first)
     click_link('Start Game')
