@@ -11,10 +11,14 @@ class GamesController < ApplicationController
   end
 
   def index
-    @movie = Movie.find(current_user.movie_counter + 1)
-    user_one_likes = find_likes(current_user.id, @movie.id)
-    user_two_likes = find_likes(@@friend_id, @movie.id)
-    print_match(user_one_likes, user_two_likes)
+    p "%#{params[:genre]}%"
+    @movie = Movie.where('genre LIKE ?', "%#{params[:genre]}%")
+    p @movie
+
+    # # @movie = Movie.find(current_user.movie_counter + 1)
+    # user_one_likes = find_likes(current_user.id, @movie.id)
+    # user_two_likes = find_likes(@@friend_id, @movie.id)
+    # print_match(user_one_likes, user_two_likes)
   end
 
   def preferences
