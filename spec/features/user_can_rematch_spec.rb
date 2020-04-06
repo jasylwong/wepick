@@ -16,7 +16,7 @@ RSpec.feature 'Rematch button', type: :feature do
     expect(page).to have_selector(:link_or_button, "ReMatch")
   end
 
-  scenario 'There is no retmach button when two users do not match' do
+  scenario 'There is no rematch button when two users do not match' do
     user = User.create(email: 'signin_test@example.com', password: '123456')
     Movie.create(title: 'Lion King', imdb_id: 'tt6105098', overview: 'test description', poster_path: '/testposter.jpg')
     movie = Movie.create(title: 'Aladdin', imdb_id: 'tt6105038', overview: 'test description', poster_path: '/testposter.jpg')

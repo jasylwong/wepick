@@ -1,7 +1,5 @@
 class GamesController < ApplicationController
 
-  @@friend = 0
-
   def new
     @@friend_id = params[:friend_id]
     redirect_to '/games'
@@ -12,9 +10,12 @@ class GamesController < ApplicationController
 
   def index
     @movie = Movie.find(current_user.movie_counter + 1)
-    user_one_likes = find_likes(current_user.id, @movie.id)
-    user_two_likes = find_likes(@@friend_id, @movie.id)
-    print_match(user_one_likes, user_two_likes)
+    if mutual_match(current_user.id, @@friend_id).empty?
+      @match = ""
+    else
+      @match = "You Matched"
+      @movie = Movie.find(mutual_match(current_user.id, @@friend_id)[0])
+    end
   end
 
   def show
@@ -42,15 +43,11 @@ class GamesController < ApplicationController
     redirect_to '/games'
   end 
 
-  def print_match(user_one_likes, user_two_likes)
-    if user_one_likes && user_two_likes 
-      @match = "You Matched"
-    else
-      @match = "" 
-    end
-  end 
-
-  def find_likes(user, movie)
-    !!MovieLike.find_by(user_id: user, movie_id: movie - 1)
+  def mutual_match(user_id, friend_id)
+    user_liked_movies = MovieLike.where(user_id: user_id).to_a
+                          .map { |movie_like| movie_like.movie_id }
+    friend_liked_movies = MovieLike.where(user_id: friend_id).to_a
+                          .map { |movie_like| movie_like.movie_id }
+    user_liked_movies & friend_liked_movies
   end
 end

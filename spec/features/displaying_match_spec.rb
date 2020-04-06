@@ -11,5 +11,7 @@ RSpec.feature 'displaying match', type: :feature do
     click_link("Start Game")
     click_button('Like')
     expect(page).to have_content("You Matched")
+    expect(page).to have_content("Lion King")
+    # expect(page).to have_content("Here's where you can watch it:")
   end 
 end
