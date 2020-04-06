@@ -6,7 +6,7 @@
 
 <br>
 <div>
-  <% if @match == "You Matched"%>
+  <% if @match %>
     <%= @match %>
     <%= button_to 'ReMatch', games_rematch_path(:user_id => current_user.id), method: :delete %>
   <%end%>
