@@ -1,5 +1,7 @@
 class GamesController < ApplicationController
 
+  @@friend_id = 0
+  
   def new
     @@friend_id = params[:friend_id]
     redirect_to '/games'
