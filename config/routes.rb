@@ -18,5 +18,7 @@ Rails.application.routes.draw do
   post '/games/dislike', to: 'games#dislike'
   post '/friendships/new', to: 'friendships#create'
   post '/games/new', to: 'games#new'
+
+  delete '/games/rematch'
   
 end

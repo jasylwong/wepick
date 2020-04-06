@@ -5,7 +5,12 @@
 <img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>" >
 
 <br>
-<div><%= @match %></div>
+<div>
+  <% if @match === "You Matched"%>
+    <%= @match %>
+    <%= button_to 'ReMatch', games_rematch_path(:user_id => current_user.id), method: :delete %>
+  <%end%>
+</div>
 
 <%= button_to 'Like', games_like_path(:user_id => current_user.id, :movie_id => @movie.id), method: :post %>
 <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post %>
