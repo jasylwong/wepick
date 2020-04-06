@@ -9,8 +9,9 @@ Rails.application.routes.draw do
   
   resources :users
   
-  resources :games do
-  end
+  get 'games/preferences', to: 'games#preferences'
+
+  resources :games
 
   root 'friendships#index'
   

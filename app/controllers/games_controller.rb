@@ -4,7 +4,7 @@ class GamesController < ApplicationController
 
   def new
     @@friend_id = params[:friend_id]
-    redirect_to '/games'
+    redirect_to '/games/preferences'
   end 
 
   def create
@@ -17,7 +17,8 @@ class GamesController < ApplicationController
     print_match(user_one_likes, user_two_likes)
   end
 
-  def show
+  def preferences
+    
   end 
 
   def destroy
