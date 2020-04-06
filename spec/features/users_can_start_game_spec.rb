@@ -10,7 +10,7 @@ RSpec.feature 'start game', type: :feature do
     expect(page).to have_content('signin_test@example.com')
     click_link('Start Game')
     click_button('Action')
-    expect(page).to have_content("Start Swiping")
+    expect(page).to have_content("Lion King")
   end
 
 end

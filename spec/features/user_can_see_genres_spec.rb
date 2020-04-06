@@ -9,7 +9,7 @@ RSpec.feature 'Displaying genres', type: :feature do
     create_test_user_and_login('signin_test2@example.com', '123456')
     click_link('Add friend', match: :first)
     click_link("Start Game")
-    expect(page).to have_content("Pick a genre")
+    expect(page).to have_content("Pick a category")
     expect(page).to have_selector(:link_or_button, "Action")
   end
 
