@@ -1,6 +1,7 @@
 <h1>Pick a genre</h1>
 
 <div>
+    <%= button_to 'All', games_path(:genre => ""), method: :post %>
     <%= button_to 'Action', games_path(:genre => "Action"), method: :post %>
     <%= button_to 'Adventure', games_path(:genre => "Adventure"), method: :post %>
     <%= button_to 'Animation', games_path(:genre => "Animation"), method: :post %>
