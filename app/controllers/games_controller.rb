@@ -20,6 +20,17 @@ class GamesController < ApplicationController
   def show
   end 
 
+  def destroy
+    movie_counter = current_user.movie_counter = 0
+    # Reset movie counter and likes for current user
+    User.where(id: params[:user_id]).update_all(movie_counter: movie_counter)
+    MovieLike.where(user_id: params[:user_id]).destroy_all
+    # Rest movie counter and likes for opponent
+    User.where(id: @@friend_id).update_all(movie_counter: movie_counter)
+    MovieLike.where(user_id: @@friend_id).destroy_all
+    redirect_to '/friendships/show'
+  end
+
   def like
     MovieLike.create(user_id: params[:user_id], movie_id: params[:movie_id])
     movie_counter = current_user.movie_counter + 1
