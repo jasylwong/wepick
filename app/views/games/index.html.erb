@@ -1,6 +1,8 @@
-<h1><%= @movie.title %></h1>
-<div><%= @movie.overview %></div>
-<img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>" >
+<div class="card">
+  <h1><%= @movie.title %></h1>
+  <%= @movie.overview %>
+  <img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>" >
+</div>
 
 <div>
   <% if @match %>
@@ -11,3 +13,33 @@
     <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post %>
   <%end%>
 </div>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', (event) => {
+
+    var mouseXStart = 0
+
+    var mouseDown = false
+
+    var card = document.getElementsByClassName('card')[0]
+    console.log(card)
+
+    document.addEventListener("mousemove", (event) => {
+      if (!mouseDown) {
+        return
+      }
+      var mouseXOffset = (event.pageX - mouseXStart) * 0.1
+      card.style.transform = `translateX(${mouseXOffset}rem) rotate(${mouseXOffset}deg)`
+    })
+
+    card.addEventListener("mousedown", (event) => {
+      mouseXStart = event.pageX
+      mouseDown = true
+    })
+
+    document.addEventListener("mouseup", (event) => {
+      mouseDown = false
+    })
+    
+  })
+</script>
