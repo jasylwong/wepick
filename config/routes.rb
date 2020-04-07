@@ -24,6 +24,3 @@ Rails.application.routes.draw do
   delete '/games/rematch'
   
 end
-
-
-# || current_page?(games_preferences_path)

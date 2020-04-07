@@ -19,7 +19,7 @@
         <ul class="nav navbar-nav">
           <div class="nav-bar nav"> 
           <% if user_signed_in? %>
-            <% if current_page?(:root)%>
+            <% if current_page?(:root) %>
               <%= link_to "Add Friend", "/friendships", class: "nav-item nav-link" %>
             <% end %>
 
@@ -31,10 +31,8 @@
           <% else %>
             <%= render "devise/shared/links" %>
           <% end %>
-      </div>
+          </div>
         </ul>
-
-
       </div>
     </div>
   </header>
