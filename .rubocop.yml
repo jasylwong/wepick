@@ -56,6 +56,8 @@ Metrics/BlockLength:
     - 'spec/**/*'
     - 'test/**/*'
 
+
+ 
 # Code Style
 # ==========
 #

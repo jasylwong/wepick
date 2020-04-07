@@ -12,6 +12,7 @@ class GamesController < ApplicationController
   def create
   end
 
+  # rubocop:disable Metrics/AbcSize
   def index
     User.where(id: current_user.id).update_all(current_genre_deck: params[:genre]) unless params[:genre].nil?
     session[:genre] = params[:genre] unless params[:genre].nil?
@@ -19,6 +20,7 @@ class GamesController < ApplicationController
     movies_id_arr = movies_by_genre.map { |movie| movie.id }
     @match, @movie = matcher(@@friend_id, movies_id_arr)
   end
+  # rubocop:enable Metrics/AbcSize
 
   def preferences
   end 
