@@ -44,11 +44,8 @@ class GamesController < ApplicationController
   def mutual_match(user_id, friend_id)
     user_liked_movies = MovieLike.where(user_id: user_id).to_a
                           .map { |movie_like| movie_like.movie_id }
-    p user_liked_movies
     friend_liked_movies = MovieLike.where(user_id: friend_id).to_a
                           .map { |movie_like| movie_like.movie_id }
-    p friend_liked_movies
-    p (user_liked_movies & friend_liked_movies)
     user_liked_movies & friend_liked_movies
   end
 end
