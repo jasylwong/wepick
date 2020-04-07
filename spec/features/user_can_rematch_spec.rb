@@ -9,6 +9,7 @@ RSpec.feature 'Rematch button', type: :feature do
     MovieLike.create(movie_id: movie_two.id, user_id: user.id)
 
     create_test_user_and_login('signin_test2@example.com', '123456')
+    click_link('Add a friend')
     click_link('Add friend', match: :first)
     click_link('Start Game')
     click_button('Action')
@@ -25,6 +26,7 @@ RSpec.feature 'Rematch button', type: :feature do
     Movie.create(title: 'Snow white', imdb_id: 'tt6105000', overview: 'test description', poster_path: '/testposter.jpg', genre: ["Action"])
     
     create_test_user_and_login('signin_test2@example.com', '123456')
+    click_link('Add a friend')
     click_link('Add friend', match: :first)
     click_link('Start Game')
     click_button('Action')
@@ -42,6 +44,7 @@ RSpec.feature 'Rematch button', type: :feature do
     Movie.create(title: 'Snow white', imdb_id: 'tt6105000', overview: 'test description', poster_path: '/testposter.jpg', genre: ["Action"])
     
     create_test_user_and_login('signin_test4@example.com', '123456')
+    click_link('Add a friend')
     click_link('Add friend', match: :first)
     click_link('Start Game')
     click_button('Action')
