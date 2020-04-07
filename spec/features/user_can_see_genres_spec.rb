@@ -33,7 +33,7 @@ RSpec.feature 'Displaying genres', type: :feature do
     create_test_user_and_login('signin_test2@example.com', '123456')
     click_link('Add friend', match: :first)
     click_link('Start Game')
-    expect(page).to have_content("signin_test@example.com has chosen All")
+    expect(page).to have_content("signin_test@example.com has chosen All, Please pick the same category")
     click_button('All')
     expect(page).to have_content('Lion King')
     click_button('Dislike')
