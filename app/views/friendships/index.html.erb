@@ -1,7 +1,6 @@
-<h1>Welcome</h1>
-<h2>Welcome <%= current_user.email %> to wepick</h2>
+<h1>Welcome <%= current_user.email %> to wepick</h1>
 
-<h3>Add a friend to your friends list</h3>
+<h2>Add a friend</h2>
 
 <% @users.each do |u| %>
   <% if u.email != current_user.email && !current_user.friends_with?(u) %>

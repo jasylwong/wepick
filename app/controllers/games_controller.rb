@@ -1,26 +1,22 @@
 class GamesController < ApplicationController
+  include GamesHelper
 
-  @@friend_id = 0
-  
   def new
     @@friend_id = params[:friend_id]
-    redirect_to '/games'
+    redirect_to '/games/preferences'
   end 
 
   def create
   end
 
   def index
-    @movie = Movie.find(current_user.movie_counter + 1)
-    if mutual_match(current_user.id, @@friend_id).empty?
-      @match = ""
-    else
-      @match = "You Matched"
-      @movie = Movie.find(mutual_match(current_user.id, @@friend_id)[0])
-    end
+    session[:genre] = params[:genre] unless params[:genre].nil?
+    movies_by_genre = Movie.where('genre LIKE ?', "%#{session[:genre]}%").to_a
+    movies_id_arr = movies_by_genre.map { |movie| movie.id }
+    @match, @movie = matcher(@@friend_id, movies_id_arr)
   end
 
-  def show
+  def preferences
   end 
 
   def destroy
