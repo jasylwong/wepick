@@ -5,11 +5,7 @@ class GamesController < ApplicationController
     @@friend_id = params[:friend_id]
     User.where(id: current_user.id).update_all(current_genre_deck: params[:genre])
     @friend = User.where(id: @@friend_id)[0]
-    if @friend.current_genre_deck != ""
-      session[:message] = "#{@friend.email} has chosen #{@friend.current_genre_deck}"
-    else
-      session[:message] = ""
-    end
+    session[:message] = genre_message(@friend)
     redirect_to '/games/preferences'
   end 
 
@@ -56,4 +52,6 @@ class GamesController < ApplicationController
                           .map { |movie_like| movie_like.movie_id }
     user_liked_movies & friend_liked_movies
   end
+
+  
 end

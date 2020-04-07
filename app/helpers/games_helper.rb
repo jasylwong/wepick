@@ -15,4 +15,13 @@ module GamesHelper
   def matched_movie(friend_id)
     Movie.find(mutual_match(current_user.id, friend_id)[0])
   end
+  
+  def genre_message(friend)
+    if friend.current_genre_deck != ""
+      "#{friend.email} has chosen #{friend.current_genre_deck}"
+    else
+      ""
+    end
+  end 
+  
 end
