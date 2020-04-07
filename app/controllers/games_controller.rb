@@ -3,6 +3,13 @@ class GamesController < ApplicationController
 
   def new
     @@friend_id = params[:friend_id]
+    User.where(id: current_user.id).update_all(current_genre_deck: params[:genre])
+    @friend = User.where(id: @@friend_id)[0]
+    if @friend.current_genre_deck != ""
+      session[:message] = "#{@friend.email} has chosen #{@friend.current_genre_deck}"
+    else
+      session[:message] = ""
+    end
     redirect_to '/games/preferences'
   end 
 
@@ -10,6 +17,7 @@ class GamesController < ApplicationController
   end
 
   def index
+    User.where(id: current_user.id).update_all(current_genre_deck: params[:genre]) unless params[:genre].nil?
     session[:genre] = params[:genre] unless params[:genre].nil?
     movies_by_genre = Movie.where('genre LIKE ?', "%#{session[:genre]}%").to_a
     movies_id_arr = movies_by_genre.map { |movie| movie.id }
@@ -21,9 +29,9 @@ class GamesController < ApplicationController
 
   def destroy
     movie_counter = 0
-    User.where(id: params[:user_id]).update_all(movie_counter: movie_counter)
+    User.where(id: params[:user_id]).update_all(movie_counter: movie_counter, current_genre_deck: "")
     MovieLike.where(user_id: params[:user_id]).destroy_all
-    User.where(id: @@friend_id).update_all(movie_counter: movie_counter)
+    User.where(id: @@friend_id).update_all(movie_counter: movie_counter, current_genre_deck: "")
     MovieLike.where(user_id: @@friend_id).destroy_all
     redirect_to '/friendships/show'
   end

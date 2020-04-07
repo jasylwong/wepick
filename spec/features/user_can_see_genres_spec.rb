@@ -26,13 +26,14 @@ RSpec.feature 'Displaying genres', type: :feature do
   end
 
   scenario 'user can select all genres' do
-    User.create(email: 'signin_test@example.com', password: '123456')
+    User.create(email: 'signin_test@example.com', password: '123456', current_genre_deck: "All")
     Movie.create(id: 1, title: 'Lion King', genre: ['Family'])
     Movie.create(id: 2, title: 'Transformers', genre: ['Action'])
     Movie.create(id: 3, title: 'James Bond', genre: ['Spy'])
     create_test_user_and_login('signin_test2@example.com', '123456')
     click_link('Add friend', match: :first)
     click_link('Start Game')
+    expect(page).to have_content("signin_test@example.com has chosen All")
     click_button('All')
     expect(page).to have_content('Lion King')
     click_button('Dislike')
