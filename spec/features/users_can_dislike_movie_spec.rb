@@ -7,6 +7,7 @@ RSpec.feature 'disliking movies', type: :feature do
     Movie.create(id: 2, title: 'Aladdin', imdb_id: 'tt6105038', overview: 'test description', poster_path: '/testposter.jpg', genre: ["Action"])
     Movie.create(id: 3, title: 'Hercules', imdb_id: 'tt6105032', overview: 'test description', poster_path: '/testposter.jpg', genre: ["Action"])
     create_test_user_and_login('signin_test2@example.com', '123456')
+    click_link('Add a friend')
     click_link('Add friend', match: :first)
     click_link('Start Game')
     click_button('Action')

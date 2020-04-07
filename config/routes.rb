@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :games
 
-  root 'friendships#index'
+  root 'friendships#show'
   
   post '/games/like', to: 'games#like'
   post '/games/dislike', to: 'games#dislike'

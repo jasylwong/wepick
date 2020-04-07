@@ -9,6 +9,7 @@ RSpec.feature 'Resets to the first movie', type: :feature do
     MovieLike.create(movie_id: movie_two.id, user_id: user.id)
     
     create_test_user_and_login('signin_test2@example.com', '123456')
+    click_link('Add a friend')
     click_link('Add friend', match: :first)
     click_link('Start Game')
     click_button('Action')

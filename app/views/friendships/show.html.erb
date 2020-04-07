@@ -1,11 +1,14 @@
 <h1>Who would you like to play with?</h1>
 
-<% current_user.friends.to_a.each do |f| %>
-  <div>
-    <%= f.email %>
-    <%= link_to 'Start Game', games_new_path(:friend_id => f.id) %>
-  </div>
-  <br>
-<% end %> 
+<% if current_user.friends.to_a.length === 0 %>
+  Please add a friend
+<% else %>
+  <% current_user.friends.to_a.each do |f| %>
+    <div>
+      <%= f.email %>
+      <%= link_to 'Start Game', games_new_path(:friend_id => f.id) %>
+    </div>
+  <% end %> 
+<% end %>
 
-<%= link_to 'Add a friend', '/' %>
+  <%= link_to 'Add a friend', '/friendships' %>

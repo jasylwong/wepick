@@ -1,5 +1,7 @@
 <h1>Pick a category</h1>
-
+<div>
+    <%= session[:message] %>
+</div>
 <div>
     <%= button_to 'All', games_path(:genre => ""), method: :post %>
     <%= button_to 'Action', games_path(:genre => "Action"), method: :post %>
