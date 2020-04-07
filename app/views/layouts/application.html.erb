@@ -13,17 +13,12 @@
     <div class="navbar-class">
       <div class="container">
 
-
       <!-- Collect the nav links, forms, and other content for toggling -->
 
         <ul class="nav navbar-nav">
           <div class="nav-bar nav"> 
           <% if user_signed_in? %>
-            <% if current_page?(:root) %>
-              <%= link_to "Add Friend", "/friendships", class: "nav-item nav-link" %>
-            <% end %>
-
-            <% if current_page?(:controller => 'games', :action => 'index')%>
+            <% if request.env['PATH_INFO'].include?('games') %> 
               <%= link_to "Quit Game", games_rematch_path(:user_id => current_user.id), method: :delete, class: "nav-item nav-link" %>
             <% end %>
 
