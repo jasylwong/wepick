@@ -26,4 +26,11 @@ RSpec.feature 'adding friends', type: :feature do
     log_in('victoria@beckham.com', 'password')
     expect(page).to have_content('david@beckham.com')
   end
+
+  scenario 'user is redirected to add a friends page using the nav bar' do 
+    sign_up('david@beckham.com', 'password')
+    expect(page).to have_content('Add Friend')
+    click_link('Add Friend')
+    expect(current_path).to eq '/friendships'
+  end 
 end
