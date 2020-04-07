@@ -1,8 +1,8 @@
 <h1><%= @movie.title %></h1>
+<h1>Movie id: <%= @movie.id %></h1>
 <div><%= @movie.overview %></div>
 <img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>" >
 
-<br>
 <div>
   <% if @match %>
     <%= @match %>

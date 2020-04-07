@@ -498,3 +498,7 @@ Style/HashTransformValues:
   Enabled: false
 Rails/SkipsModelValidations:
   Enabled: false
+Lint/RaiseException:
+  Enabled: false
+Lint/StructNewOverride:
+  Enabled: false
