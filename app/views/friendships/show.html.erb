@@ -1,7 +1,7 @@
 <h1>Who would you like to play with?</h1>
 
 <% if current_user.friends.to_a.length === 0 %>
-  Please add a friend
+  Please add a friend to begin
 <% else %>
   <% current_user.friends.to_a.each do |f| %>
     <div>
