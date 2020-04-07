@@ -1,6 +1,40 @@
 <h1><%= @movie.title %></h1>
+<h1>Movie id: <%= @movie.id %></h1>
 <div><%= @movie.overview %></div>
 <img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>" >
+
+<div>
+  Current user:
+  <%= current_user.id %>,
+</div>
+<br>
+<div>
+  Current user email:
+  <%= current_user.email %>,
+</div>
+<br>
+<div>
+  Current user movie counter:
+  <%= current_user.movie_counter %>,
+</div>
+<br>
+
+------------------------------
+<div>
+  Friend id:
+  <%= @friend_id %>,
+</div>
+<br>
+<div>
+  Friend email:
+  <%= User.find(@friend_id).email %>
+</div>
+<br>
+<div>
+  Friend movie counter:
+  <%= User.find(@friend_id).movie_counter %>,
+</div>
+<br>
 
 <br>
 <div>
