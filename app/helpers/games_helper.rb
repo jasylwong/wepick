@@ -9,7 +9,7 @@ module GamesHelper
   end
 
   def match?(friend_id)
-    if current_user.id == friend_id || mutual_match(current_user.id, friend_id).empty?
+    if mutual_match(current_user.id, friend_id).empty? # || current_user.id == friend_id
       false
     else 
       true
@@ -18,10 +18,6 @@ module GamesHelper
 
   def friend_email(friend_id)
     User.find(friend_id).email
-  end
-
-  def matched_movie(friend_id)
-    Movie.find(mutual_match(current_user.id, friend_id)[0])
   end
 
 end

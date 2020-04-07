@@ -18,25 +18,3 @@
     <%= button_to 'Thriller', games_path(:genre => "Thriller"), method: :post %>
     <%= button_to 'War', games_path(:genre => "War"), method: :post %>
 </div>
-
-<div>
-  Current user:
-  <%= current_user.id %>,
-</div>
-<br>
-<div>
-  Current user email:
-  <%= current_user.email %>,
-</div>
-<br>
-
-<div>
-  Friend id:
-  <%= @friend_id %>,
-</div>
-<br>
-<div>
-  Friend email:
-  <%= User.find(@friend_id).email %>
-</div>
-<br>
