@@ -19,8 +19,14 @@
         <ul class="nav navbar-nav">
           <div class="nav-bar nav"> 
           <% if user_signed_in? %>
-            <li class="active"><a href="#">HOME</a></li>
-            <a class="nav-item nav-link" href="/users/<%= current_user.id %>"></a>
+            <% if current_page?(:root) || current_page?(games_preferences_path)%>
+              <%= link_to "Choose Friend", "/friendships/show", class: "nav-item nav-link" %>
+            <% end %>
+
+            <% if current_page?(:controller => 'games', :action => 'index')%>
+              <%= link_to "Quit Game", games_rematch_path(:user_id => current_user.id), method: :delete, class: "nav-item nav-link" %>
+            <% end %>
+
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-item nav-link"%>
           <% else %>
             <%= render "devise/shared/links" %>
