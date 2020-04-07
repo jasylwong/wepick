@@ -27,7 +27,7 @@ module GamesHelper
       ""
     end
   end 
-
+  
   def number_of_active_players
     all_movie_likes = MovieLike.all.to_a
     active_player_ids = all_movie_likes.map { |movielike| movielike.user_id }.uniq
