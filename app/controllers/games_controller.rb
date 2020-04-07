@@ -1,17 +1,19 @@
 class GamesController < ApplicationController
   include GamesHelper
 
+  # rubocop:disable Metrics/AbcSize
   def new
     session[:friend_id] = params[:friend_id]
+    friend = User.find(session[:friend_id])
     MovieLike.where(user_id: current_user.id).destroy_all
     User.where(id: current_user.id).update_all(movie_counter: 0)
+    session[:message] = genre_message(friend)
     redirect_to '/games/preferences'
   end 
 
   def create
   end
 
-  # rubocop:disable Metrics/AbcSize
   def index
     User.where(id: current_user.id).update_all(current_genre_deck: params[:genre]) unless params[:genre].nil?
     session[:genre] = params[:genre] unless params[:genre].nil?

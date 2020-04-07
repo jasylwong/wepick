@@ -9,7 +9,7 @@ module GamesHelper
   end
 
   def match?(friend_id)
-     !(mutual_match(current_user.id, friend_id).empty?) 
+    !mutual_match(current_user.id, friend_id).empty? 
   end
 
   def friend_email(friend_id)
