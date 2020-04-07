@@ -13,6 +13,7 @@ class GamesController < ApplicationController
   def create
   end
 
+  # rubocop:disable Metrics/AbcSize
   def index
     session[:genre] = params[:genre] unless params[:genre].nil?
     movies_by_genre = Movie.where('genre LIKE ?', "%#{session[:genre]}%").to_a
@@ -35,6 +36,7 @@ class GamesController < ApplicationController
     MovieLike.where(user_id: session[:friend_id]).destroy_all
     redirect_to '/friendships/show'
   end
+  # rubocop:enable Metrics/AbcSize
 
   def like
     MovieLike.create(user_id: params[:user_id], movie_id: params[:movie_id])
