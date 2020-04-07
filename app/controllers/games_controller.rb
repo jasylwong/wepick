@@ -3,6 +3,8 @@ class GamesController < ApplicationController
 
   def new
     @@friend_id = params[:friend_id]
+    MovieLike.where(user_id: current_user.id).destroy_all
+    User.where(id: current_user.id).update_all(movie_counter: 0)
     redirect_to '/games/preferences'
   end 
 
