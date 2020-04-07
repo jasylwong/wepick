@@ -54,6 +54,4 @@ class GamesController < ApplicationController
                           .map { |movie_like| movie_like.movie_id }
     user_liked_movies & friend_liked_movies
   end
-
-  
 end
