@@ -9,6 +9,7 @@ RSpec.feature 'User can see users', type: :feature do
     fill_in('Password', with: 'password')
     fill_in('Password confirmation', with: 'password')
     click_button 'Sign up'
+    click_link('Add a friend')
     expect(page).to have_content('signin_test@example.com')
     expect(page).to have_content('signin_test2@example.com')
   end
@@ -17,11 +18,12 @@ RSpec.feature 'User can see users', type: :feature do
     sign_up('john@lennon.com', 'password')
     click_link 'Sign Out'
     sign_up('yoko@ono.com', 'password')
-    expect(page).not_to have_content('Go to friends list')
+    click_link('Add a friend')
     expect(page).to have_content('john@lennon.com')
     click_link('Add friend', match: :first)
     click_link 'Sign Out'
     log_in('yoko@ono.com', 'password')
-    expect(page).to have_content('Go to friends list')
+    click_link('Add a friend')
+    expect(page).not_to have_content('john@lennon.com')
   end
 end

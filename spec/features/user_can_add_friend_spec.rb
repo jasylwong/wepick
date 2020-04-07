@@ -9,6 +9,7 @@ RSpec.feature 'adding friends', type: :feature do
     fill_in('Password', with: 'password')
     fill_in('Password confirmation', with: 'password')
     click_button 'Sign up'
+    click_link('Add a friend')
     click_link('Add friend', match: :first)
     expect(current_path).to eq('/friendships/show')
     expect(page).to have_content('signin_test@example.com')    
@@ -18,10 +19,11 @@ RSpec.feature 'adding friends', type: :feature do
     sign_up('david@beckham.com', 'password')
     click_link 'Sign Out'
     sign_up('victoria@beckham.com', 'password')
+    click_link('Add a friend')
     expect(page).to have_content('david@beckham.com')
     click_link('Add friend', match: :first)
     click_link 'Sign Out'
     log_in('victoria@beckham.com', 'password')
-    expect(page).not_to have_content('david@beckham.com')
+    expect(page).to have_content('david@beckham.com')
   end
 end

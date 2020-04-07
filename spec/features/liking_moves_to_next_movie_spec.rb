@@ -6,6 +6,7 @@ RSpec.feature 'movie progression', type: :feature do
     Movie.create(title: 'James Bond 1', genre: ['Action'], overview: 'test description', poster_path: 'https://image.tmdb.org/t/p/w500/testposter.jpg')
     Movie.create(title: 'James Bond 2', genre: ['Action'], overview: 'test description', poster_path: 'https://image.tmdb.org/t/p/w500/testposter.jpg')
     create_test_user_and_login('signin_test2@example.com', '123456')
+    click_link('Add a friend')
     click_link('Add friend', match: :first)
     click_link('Start Game')
     click_button('Action')
