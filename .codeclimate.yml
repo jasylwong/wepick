@@ -1,2 +1,4 @@
 exclude_patterns:
 - "babel.config.js"
+- "app/movies/utelly_request.rb"
+- "app/services/utelly/base.rb"

@@ -7,10 +7,6 @@ module Utelly
       Collection.new(response)
     end
 
-    # def self.get_by_id(id)
-    #   UtellyRequest.get_by_id(id)
-    # end
-
     def initialize(args = {})
       @args = args
       super(@args)
