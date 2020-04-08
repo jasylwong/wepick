@@ -23,6 +23,13 @@ form {
 }
 
 .test {
+  padding-top: 12px;
   position: absolute;
   right: 5vw;
+}
+
+.quit-game {
+  padding-top: 12px;
+  position: absolute;
+  left: 17vw;
 }
