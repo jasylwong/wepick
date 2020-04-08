@@ -20,7 +20,9 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
 
         <ul class="nav navbar-nav">
-          <div class="nav-bar nav"> 
+          <div class="nav-bar nav">
+            <img src="/images/wepicklogo.png" width="200" alt="We Pick">
+
           <% if user_signed_in? %>
             <% if request.env['PATH_INFO'].include?('games') %> 
               <%= link_to "Quit Game", games_rematch_path(:user_id => current_user.id), method: :delete, class: "nav-item nav-link" %>

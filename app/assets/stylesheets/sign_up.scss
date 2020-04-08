@@ -1,7 +1,3 @@
-.body {
-  background-color: #0E2A47;
-}
-
 .header {
   color: white;
 }
@@ -9,4 +5,30 @@
 .sign-up-form {
   background-color: #48ffD5;
   color: white;
+  border-radius: 15px;
+}
+
+label {
+  font-size: 15px;
+}
+
+.form-input-field {
+  border-radius: 5px;
+}
+
+.form-text {
+  color: #0E2A47;
+}
+
+.sign-up-button {
+  border-radius: 5px;
+  border-color: rgb(42, 124, 211);
+  background-color: rgb(42, 124, 211);
+  color: white;
+}
+
+.sign-up-button:hover {
+  background-color: #0E2A47;
+  border-color: #0E2A47;
+  cursor: pointer;
 }
