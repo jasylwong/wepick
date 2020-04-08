@@ -23,11 +23,17 @@ form {
 }
 
 .test {
+  padding-top: 12px;
   position: absolute;
   right: 5vw;
 }
 
-.nav-buttons {
-  color: pink;
-  background-color: green;
+.quit-game {
+  padding-top: 12px;
+  position: absolute;
+  left: 17vw;
+}
+
+.error {
+  color: white;
 }

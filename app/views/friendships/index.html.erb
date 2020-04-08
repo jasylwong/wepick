@@ -1,17 +1,28 @@
-<h1>Welcome <%= current_user.email %> to wepick</h1>
+<head>
+  <link rel="stylesheet" href="assets/stylesheets/">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
 
-<h2>Add a friend</h2>
-
-<% @users.each do |u| %>
-  <% if u.email != current_user.email && !current_user.friends_with?(u) %>
-    <div>
-      <%= u.email %>
-      <%= button_to 'Add friend', friendships_new_path(:friend => u.id), method: :post %>
-    </div>
+<body> 
+  <div class="friends-form mx-auto w-50" id="rcorners" style="width: 1000px;" align="center">
     <br>
-  <% end %>
-<% end %>
+    <h1>Add a friend</h1>
+    <h4>Potential movie buddies:</h4>
+    <br>
+    <% @users.each do |u| %>
+      <% if u.email != current_user.email && !current_user.friends_with?(u) %>
+        <div>
+          <%= u.email %>
+          <%= button_to 'Add friend', friendships_new_path(:friend => u.id), method: :post, class: "friendships-button" %>
+        </div>
+        <br>
+      <% end %>
+    <% end %>
 
-<% unless current_user.friends.to_a.empty? %>
-  <%= button_to 'Go to friends list', '/', method: :get %>
-<% end %>
+    <div class ="add-a-friend">
+      <% unless current_user.friends.to_a.empty? %>
+        <%= button_to 'Go to friends list', '/', method: :get, class: "friendships-button" %>
+      <% end %>
+    </div>
+  </div>
+</body>
