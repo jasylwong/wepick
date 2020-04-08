@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #0E2A47;
+}
+
+form {
+  border-radius: 25px;
+}
+
+.test {
+  padding-top: 12px;
+  position: absolute;
+  right: 5vw;
+}
+
+.quit-game {
+  padding-top: 12px;
+  position: absolute;
+  left: 17vw;
+}
+
+.error {
+  color: white;
+}

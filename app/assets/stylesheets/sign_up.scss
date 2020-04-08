@@ -1,0 +1,129 @@
+.header {
+  color: white;
+}
+
+.sign-up-form {
+  background-color: #48ffD5;
+  color: white;
+  border-radius: 15px;
+}
+
+label {
+  font-size: 15px;
+}
+
+.form-input-field {
+  height: 80%;
+  border-radius: 5px;
+  transition: 0.4s ease-out;
+  width: 75%;
+}
+
+.form-input-field:focus {
+  box-shadow: 0px 0px 8px 3px rgb(42, 124, 211);
+}
+
+.form-text {
+  color: #0E2A47;
+}
+
+.sign-up-button {
+  border-radius: 5px;
+  border-color: rgb(42, 124, 211);
+  background-color: rgb(42, 124, 211);
+  color: white;
+}
+
+.sign-up-button:hover {
+  background-color: #0E2A47;
+  border-color: #0E2A47;
+  cursor: pointer;
+}
+
+.i-you-pick {
+  font-size: 25px;
+  color: white;
+}
+
+.we-pick {
+  color: #48ffD5;
+  font-size: 100px;
+  font-family: 'Righteous', cursive;
+}
+
+.we-pick-nav {
+  color: #48ffD5;
+  font-size: 30px;
+  font-family: 'Righteous', cursive;
+  padding-left: 20%;
+}
+
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+.fade-in2 {
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+
+}
+
+.fade-in3 {
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}

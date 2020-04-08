@@ -1,22 +1,28 @@
-<h1>Pick a category</h1>
-<div>
-    <%= session[:message] %>
+<div class="genre-container">
+<div class="genre-message">
+    <h2><%= session[:message] %></h2>
 </div>
-<div>
-    <%= button_to 'All', games_path(:genre => ""), method: :post %>
-    <%= button_to 'Action', games_path(:genre => "Action"), method: :post %>
-    <%= button_to 'Adventure', games_path(:genre => "Adventure"), method: :post %>
-    <%= button_to 'Animation', games_path(:genre => "Animation"), method: :post %>
-    <%= button_to 'Comedy', games_path(:genre => "Comedy"), method: :post %>
-    <%= button_to 'Crime', games_path(:genre => "Crime"), method: :post %>
-    <%= button_to 'Drama', games_path(:genre => "Drama"), method: :post %>
-    <%= button_to 'Family', games_path(:genre => "Family"), method: :post %>
-    <%= button_to 'Fantasy', games_path(:genre => "Fantasy"), method: :post %>
-    <%= button_to 'History', games_path(:genre => "History"), method: :post %>
-    <%= button_to 'Horror', games_path(:genre => "Horror"), method: :post %>
-    <%= button_to 'Mystery', games_path(:genre => "Mystery"), method: :post %>
-    <%= button_to 'Romance', games_path(:genre => "Romance"), method: :post %>
-    <%= button_to 'Science Fiction', games_path(:genre => "Science Fiction"), method: :post %>
-    <%= button_to 'Thriller', games_path(:genre => "Thriller"), method: :post %>
-    <%= button_to 'War', games_path(:genre => "War"), method: :post %>
+
+<div class="dropdown mx-auto">
+    <button class="dropbtn"><h2>Pick a category ▼<h2>
+    <div class="dropdown-content">
+        <%= link_to 'All', games_path(:genre => ""), method: :post %>
+        <%= link_to 'Action', games_path(:genre => "Action"), method: :post%>
+        <%= link_to 'Adventure', games_path(:genre => "Adventure"), method: :post %>
+        <%= link_to 'Animation', games_path(:genre => "Animation"), method: :post %>
+        <%= link_to 'Comedy', games_path(:genre => "Comedy"), method: :post %>
+        <%= link_to 'Crime', games_path(:genre => "Crime"), method: :post %>
+        <%= link_to 'Drama', games_path(:genre => "Drama"), method: :post %>
+        <%= link_to 'Family', games_path(:genre => "Family"), method: :post %>
+        <%= link_to 'Fantasy', games_path(:genre => "Fantasy"), method: :post %>
+        <%= link_to 'History', games_path(:genre => "History"), method: :post %>
+        <%= link_to 'Horror', games_path(:genre => "Horror"), method: :post %>
+        <%= link_to 'Mystery', games_path(:genre => "Mystery"), method: :post %>
+        <%= link_to 'Romance', games_path(:genre => "Romance"), method: :post %>
+        <%= link_to 'Science Fiction', games_path(:genre => "Science Fiction"), method: :post %>
+        <%= link_to 'Thriller', games_path(:genre => "Thriller"), method: :post %>
+        <%= link_to 'War', games_path(:genre => "War"), method: :post %>
+    </div>
 </div>
+</div>
+

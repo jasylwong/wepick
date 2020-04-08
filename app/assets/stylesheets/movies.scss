@@ -1,3 +1,36 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 5px #48ffd5 solid;
+  border-radius: 25px;
+  background-color: #0E2A47;
+  // background-color: white;
+  // color: #0E2A47;
+  color: white;
+  width: 70%;
+}
+
+.like-dislike-container {
+  text-align: center;
+  left: 20%;
+}
+
+.dislike {
+  background-color: red;
+  float: left; 
+  width: 25%;
+  border-radius: 15%;
+}
+
+.like {
+  background-color: green;
+}
+
+

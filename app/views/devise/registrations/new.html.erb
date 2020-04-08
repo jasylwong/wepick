@@ -1,27 +1,58 @@
-<h2>Sign up</h2>
+<div>
+  <div style="float: left; width: 65vw;">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="header mx-auto w-25 p-3" align="center">
+      <h2>Sign up</h2>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="sign-up-form mx-auto w-50 h-100 p-3" align="center">
+
+        <div class="field form-text">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input-field" %>
+        </div>
+        <br>
+
+        <div class="field form-text">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "new-password", class: "form-input-field" %>
+        </div>
+        <br>
+
+        <div class="field form-text">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input-field"%>
+        </div>
+        <br>
+        <br>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: "sign-up-button" %>
+        </div>
+        
+      </div>
+
+
+      <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+  <br><br><br>
+  <div style="float: left;">
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+    <div class="i-you-pick fade-in">
+      I pick
+    </div><br><br><br>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+    <div class="i-you-pick fade-in2">
+      You pick
+    </div><br><br><br>
+
+    <div class="we-pick fade-in3">
+      WePick
+    </div>
+
   </div>
-<% end %>
+</div>

@@ -1,6 +1,16 @@
-<h1><%= @movie.title %></h1>
-<div><%= @movie.overview %></div>
-<img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>" >
+<div class="card">
+  <div class="p-3">
+    <div style="float: left; width: 40%; vertical-align: middle;">
+      <h1><%= @movie.title %></h1>
+      <br>
+      <%= @movie.overview %>
+    </div>
+    <div style="float: right; width: 60%;">
+      <img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>" height="500vh">
+    </div>
+  </div>
+
+</div>
 
 <div>
   <% if @match %>
@@ -8,7 +18,11 @@
     <%= @where_to_watch %>
     <%= button_to 'ReMatch', games_rematch_path(:user_id => current_user.id), method: :delete %>
   <% else %>
-    <%= button_to 'Like', games_like_path(:user_id => current_user.id, :movie_id => @movie.id), method: :post %>
-    <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post %>
+    <div class="like-dislike-container mx-auto">
+      
+        <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post, class:"dislike" %>
+      
+        <%= button_to 'Like', games_like_path(:user_id => current_user.id, :movie_id => @movie.id), method: :post, class:"like" %>
+    </div>
   <%end%>
 </div>
