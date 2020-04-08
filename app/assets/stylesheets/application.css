@@ -26,3 +26,8 @@ form {
   position: absolute;
   right: 5vw;
 }
+
+.nav-buttons {
+  color: pink;
+  background-color: green;
+}
