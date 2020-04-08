@@ -19,7 +19,7 @@ class GamesController < ApplicationController
     session[:genre] = params[:genre] unless params[:genre].nil?
     movies_by_genre = Movie.where('genre LIKE ?', "%#{session[:genre]}%").to_a
     movies_id_arr = movies_by_genre.map { |movie| movie.id }
-    @match, @movie = matcher(session[:friend_id], movies_id_arr)
+    @match, @movie, @where_to_watch = matcher(session[:friend_id], movies_id_arr)
   end
 
   def preferences
