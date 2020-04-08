@@ -6,9 +6,10 @@
   <% current_user.friends.to_a.each do |f| %>
     <div>
       <%= f.email %>
-      <%= link_to 'Start Game', games_new_path(:friend_id => f.id) %>
+      <%= button_to 'Start Game', games_new_path(:friend_id => f.id) %>
     </div>
   <% end %> 
 <% end %>
 
-  <%= link_to 'Add a friend', '/friendships' %>
+
+  <%= button_to 'Add a friend', '/friendships', method: :get %>
