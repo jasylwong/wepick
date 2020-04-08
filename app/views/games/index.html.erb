@@ -19,10 +19,10 @@
     <%= button_to 'ReMatch', games_rematch_path(:user_id => current_user.id), method: :delete %>
   <% else %>
     <div class="like-dislike-container mx-auto">
-      
-        <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post, class:"dislike" %>
-      
-        <%= button_to 'Like', games_like_path(:user_id => current_user.id, :movie_id => @movie.id), method: :post, class:"like" %>
+
+        <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post, class:"dislike-button" %>
+
+        <%= button_to 'Like', games_like_path(:user_id => current_user.id, :movie_id => @movie.id), method: :post, class:"like-button" %>
     </div>
   <%end%>
 </div>

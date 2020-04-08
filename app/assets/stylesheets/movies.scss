@@ -22,14 +22,17 @@
   left: 20%;
 }
 
-.dislike {
-  background-color: red;
+.dislike-button {
   float: left; 
-  width: 25%;
-  border-radius: 15%;
+  width: 50%;
+  height: 500px;
+  background: url(https://images.unsplash.com/photo-1484557985045-edf25e08da73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
 }
 
-.like {
+.like-button {
+  float: left; 
+  width: 50%;
+  height: 500px;
   background-color: green;
 }
 
