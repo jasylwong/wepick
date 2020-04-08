@@ -3,19 +3,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 
-
 <body> 
   <div class="friends-form mx-auto w-50" id="rcorners" style="width: 1000px;" align="center">
-    <h1>Welcome <%= current_user.email %> </h1>
-    <h1>to wepick</h1>
     <br>
-    <h2>Add a friend</h2>
+    <h1>Add a friend</h1>
+    <h4>Potential movie buddies:</h4>
     <br>
     <% @users.each do |u| %>
       <% if u.email != current_user.email && !current_user.friends_with?(u) %>
         <div>
           <%= u.email %>
-          <%= button_to 'Add friend', friendships_new_path(:friend => u.id), method: :post %>
+          <%= button_to 'Add friend', friendships_new_path(:friend => u.id), method: :post, class: "friendships-button" %>
         </div>
         <br>
       <% end %>
@@ -23,7 +21,7 @@
 
     <div class ="add-a-friend">
       <% unless current_user.friends.to_a.empty? %>
-        <%= button_to 'Go to friends list', '/', method: :get %>
+        <%= button_to 'Go to friends list', '/', method: :get, class: "friendships-button" %>
       <% end %>
     </div>
   </div>

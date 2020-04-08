@@ -20,16 +20,16 @@ label {
   color: #0E2A47;
 }
 
-.sign-up-button {
+.friendships-button {
   border-radius: 5px;
-  border-color: rgb(42, 124, 211);
-  background-color: rgb(42, 124, 211);
-  color: white;
+  border-color: #48ffD5;
+  background-color: #48ffD5;
+  color: black;
 }
 
-.sign-up-button:hover {
-  background-color: #0E2A47;
-  border-color: #0E2A47;
+.friendships-button:hover {
+  background-color: rgb(199, 255, 242);
+  border-color: rgb(199, 255, 242);
   cursor: pointer;
 }
 
@@ -44,14 +44,12 @@ label {
 }
 
 .names {
-  padding-left: 140px;
   padding-bottom: 10px;
   padding-top: 10px;
   
 }
 
 .add-a-friend {
-  padding-left: 140px;
   padding-bottom: 20px;
   padding-top: 20px;
 }

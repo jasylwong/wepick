@@ -4,7 +4,7 @@
 </head>
 
 <body> 
-  <div class="friends-form mx-auto w-50" id="rcorners" style="width: 1000px;">
+  <div class="friends-form mx-auto w-50" id="rcorners" style="width: 1000px;" align="center">
   <h1>Who would you like to play with?</h1>
 
     <% if current_user.friends.to_a.length === 0 %>
@@ -13,13 +13,13 @@
       <% current_user.friends.to_a.each do |f| %>
         <div class="names">
           <%= f.email %>
-          <%= button_to 'Start Game', games_new_path(:friend_id => f.id) %>
+          <%= button_to 'Start Game', games_new_path(:friend_id => f.id), class: "friendships-button" %>
         </div>
       <% end %> 
     <% end %>
 
     <div class ="add-a-friend">
-      <%= button_to 'Add a friend', '/friendships', method: :get %>
+      <%= button_to 'Add a friend', '/friendships', method: :get, class: "friendships-button" %>
     </div>
     
   </div>
