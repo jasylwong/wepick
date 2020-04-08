@@ -5,6 +5,7 @@
 <div>
   <% if @match %>
     <%= @match %>
+    <%= @where_to_watch %>
     <%= button_to 'ReMatch', games_rematch_path(:user_id => current_user.id), method: :delete %>
   <% else %>
     <%= button_to 'Like', games_like_path(:user_id => current_user.id, :movie_id => @movie.id), method: :post %>

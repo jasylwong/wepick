@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.feature 'Resets to the first movie', type: :feature do
   scenario 'Movie resets to first movie, after clicking rematch button' do
     user = User.create(email: 'signin_test@example.com', password: '123456')
-    Movie.create(title: 'James Bond 1', genre: ['Action'])
-    movie_two = Movie.create(title: 'James Bond 2', genre: ['Action'])
-    Movie.create(title: 'James Bond 3', genre: ['Action'])
+    Movie.create(title: 'James Bond 1', genre: ['Action'], imdb_id: "tt2935510")
+    movie_two = Movie.create(title: 'James Bond 2', genre: ['Action'], imdb_id: "tt2935510")
+    Movie.create(title: 'James Bond 3', genre: ['Action'], imdb_id: "tt2935510")
     MovieLike.create(movie_id: movie_two.id, user_id: user.id)
     
     create_test_user_and_login('signin_test2@example.com', '123456')
