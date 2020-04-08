@@ -19,7 +19,7 @@
         <% if request.env['PATH_INFO'].include?('games') %> 
           <%= link_to "Quit Game", games_rematch_path(:user_id => current_user.id), method: :delete, class: "nav-item nav-link" %>
         <% end %>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-item nav-link"%>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "test"%>
       <% else %>
         <%= render "devise/shared/links" %>
       <% end %>
