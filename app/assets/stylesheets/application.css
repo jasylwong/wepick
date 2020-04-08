@@ -33,3 +33,7 @@ form {
   position: absolute;
   left: 17vw;
 }
+
+.error {
+  color: white;
+}
