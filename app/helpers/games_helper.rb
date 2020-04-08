@@ -3,7 +3,7 @@ module GamesHelper
     if match?(friend_id)
       matched_movie = Movie.find(mutual_match(current_user.id, friend_id)[0])
       where_to_watch = run_utelly(matched_movie.imdb_id)
-      ["You Matched with #{friend_email(friend_id)}!", matched_movie, where_to_watch]
+      ["You matched with #{friend_email(friend_id)}!", matched_movie, where_to_watch]
     else
       [nil, Movie.find(movies_id_arr[current_user.movie_counter])]
     end

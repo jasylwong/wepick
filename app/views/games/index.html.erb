@@ -1,3 +1,13 @@
+
+<% if @match %>
+  <div class="card">
+    <div class="matched"><%= @match %></div>
+    <div class="where-to-watch"><%= @where_to_watch %></div><br>
+    <%= button_to 'ReMatch', games_rematch_path(:user_id => current_user.id), method: :delete, class:"rematch-button" %>
+  </div>
+<% end %>
+<br>
+
 <div class="card">
   <div class="p-3">
     <div style="float: left; width: 40%; vertical-align: middle;">
@@ -9,14 +19,12 @@
       <img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>" height="500vh">
     </div>
   </div>
-
 </div>
 
 <div>
   <% if @match %>
     <%= @match %>
     <%= @where_to_watch %>
-    <%= button_to 'ReMatch', games_rematch_path(:user_id => current_user.id), method: :delete %>
   <% else %>
     <div class="like-dislike-container mx-auto">
 

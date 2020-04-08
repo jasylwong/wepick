@@ -2,9 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
-
 .card {
+  padding: 10px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -15,6 +14,28 @@
   // color: #0E2A47;
   color: white;
   width: 70%;
+}
+
+.matched {
+  font-size: 50px;
+}
+
+.where-to-watch {
+  font-size: 30px;
+}
+
+.rematch-button {
+  width: 15%;
+  border-radius: 5px;
+  border-color: #48ffD5;
+  background-color: #48ffD5;
+  color: black;
+}
+
+.rematch-button:hover {
+  background-color: rgb(199, 255, 242);
+  border-color: rgb(199, 255, 242);
+  cursor: pointer;
 }
 
 .like-dislike-container {
