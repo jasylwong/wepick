@@ -9,6 +9,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
   </head>
 
@@ -23,15 +24,15 @@
           <div class="nav-bar nav">
             <img src="/images/wepicklogo (1).png" width="200" alt="We Pick">
 
-          <% if user_signed_in? %>
-            <% if request.env['PATH_INFO'].include?('games') %> 
-              <%= link_to "Quit Game", games_rematch_path(:user_id => current_user.id), method: :delete, class: "nav-item nav-link" %>
-            <% end %>
+            <% if user_signed_in? %>
+              <% if request.env['PATH_INFO'].include?('games') %> 
+                <%= link_to "Quit Game", games_rematch_path(:user_id => current_user.id), method: :delete, class: "nav-item nav-link" %>
+              <% end %>
 
-            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-item nav-link"%>
-          <% else %>
-            <%= render "devise/shared/links" %>
-          <% end %>
+              <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-item nav-link"%>
+            <% else %>
+              <%= render "devise/shared/links" %>
+            <% end %>
           </div>
         </ul>
       </div>
