@@ -12,7 +12,7 @@ RSpec.feature 'displaying match', type: :feature do
     click_button('Start Game')
     click_link('Action')
     click_button('Like')
-    expect(page).to have_content('You Matched')
+    expect(page).to have_content('You matched')
     expect(page).to have_content('James Bond 1')
   end 
 end

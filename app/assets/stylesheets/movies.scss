@@ -2,9 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-
-
 .card {
+  padding: 10px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -17,20 +16,57 @@
   width: 70%;
 }
 
+.matched {
+  font-size: 50px;
+}
+
+.where-to-watch {
+  font-size: 30px;
+}
+
+.rematch-button {
+  width: 15%;
+  border-radius: 5px;
+  border-color: #48ffD5;
+  background-color: #48ffD5;
+  color: black;
+}
+
+.rematch-button:hover {
+  background-color: rgb(199, 255, 242);
+  border-color: rgb(199, 255, 242);
+  cursor: pointer;
+}
+
 .like-dislike-container {
   text-align: center;
   left: 20%;
 }
 
-.dislike {
-  background-color: red;
-  float: left; 
-  width: 25%;
-  border-radius: 15%;
+.dislike-button {
+  float: left;
+  width: auto;
+  height: 70px;
+  background: url(https://cdn.shopify.com/s/files/1/1061/1924/products/Thumbs_Down_Sign_Emoji_Icon_ios10_compact.png?v=1571606114);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-width: 0px;
+  color: transparent;
+  padding-left: 10px;
+  margin-left: 30%;
+  margin-top: 4%;
 }
 
-.like {
-  background-color: green;
+.like-button {
+  float: right;
+  width: auto;
+  height: 100px;
+  background: url(https://cdn.shopify.com/s/files/1/1061/1924/products/Thumbs_Up_Sign_Emoji_Icon_ios10_compact.png?v=1571606114);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-width: 0px;
+  color: transparent;
+  padding-right: 30px;
+  margin-right: 30%;
+  margin-top: 4%;
 }
-
-
