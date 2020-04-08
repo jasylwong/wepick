@@ -1,28 +1,53 @@
-<div class="header mx-auto w-25 p-3" align="center">
-  <h2>Log in</h2>
-</div>
+<div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="sign-up-form mx-auto w-50 h-100 p-3" align="center">
-    <div class="field form-text">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div style="float: left; width: 65vw;">
+  
+    <div class="header mx-auto w-25 p-3" align="center">
+      <h2>Log in</h2>
     </div>
 
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "current-password" %>
-    </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="sign-up-form mx-auto w-50 h-100 p-3" align="center">
+        <div class="field form-text">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input-field" %>
+        </div>
 
-    <% if devise_mapping.rememberable? %>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+        <div class="field form-text">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password", class: "form-input-field" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field form-text">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit "Log in", class: "sign-up-button" %>
+        </div>
       </div>
     <% end %>
-
-    <div class="actions">
-      <%= f.submit "Log in", class: "sign-up-button" %>
-    </div>
   </div>
-<% end %>
+
+  <br>
+
+  <div style="float: left;">
+
+    <div class="i-you-pick fade-in">
+      I pick
+    </div><br><br>
+
+    <div class="i-you-pick fade-in2">
+      You pick
+    </div><br><br>
+
+    <div class="we-pick fade-in3">
+      WePick
+    </div>
+
+  </div>
+
+</div>
