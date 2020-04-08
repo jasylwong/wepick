@@ -2,16 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.movie-container{
-  position: absolute;
-  background-color:white;
-  width: 80%;
-  left: 10%;
+
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   border: 5px #48ffd5 solid;
   border-radius: 25px;
-  color: #0E2A47;
-}
-
-.movie-image{
-  height: 30vh;
+  background-color: #0E2A47;
+  // background-color: white;
+  // color: #0E2A47;
+  color: white;
+  width: 70%;
 }

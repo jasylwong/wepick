@@ -1,11 +1,14 @@
-<div class="movie-container">
-<div class="mx-auto w-50 p-3" align="center">
-<h1><%= @movie.title %></h1>
-<%= @movie.overview %>
-</div>
-
-<div >
-<img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %> "height="20%">
+<div class="card">
+  <div class="p-3">
+    <div style="float: left; width: 40%; vertical-align: middle;">
+      <h1><%= @movie.title %></h1>
+      <br>
+      <%= @movie.overview %>
+    </div>
+    <div style="float: right; width: 60%;">
+      <img src="https://image.tmdb.org/t/p/w500<%= @movie.poster_path %>" height="500vh">
+    </div>
+  </div>
 </div>
 
 <div>
@@ -17,4 +20,4 @@
     <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post %>
   <%end%>
 </div>
-</div>
+
