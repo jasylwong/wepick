@@ -22,15 +22,10 @@
 </div>
 
 <div>
-  <% if @match %>
-    <%= @match %>
-    <%= @where_to_watch %>
-  <% else %>
+  <% unless @match %>
     <div class="like-dislike-container mx-auto">
-
-        <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post, class:"dislike-button" %>
-
-        <%= button_to 'Like', games_like_path(:user_id => current_user.id, :movie_id => @movie.id), method: :post, class:"like-button" %>
+      <%= button_to 'Dislike', games_dislike_path(:user_id => current_user.id), method: :post, class:"dislike-button" %>
+      <%= button_to 'Like', games_like_path(:user_id => current_user.id, :movie_id => @movie.id), method: :post, class:"like-button" %>
     </div>
   <%end%>
 </div>
