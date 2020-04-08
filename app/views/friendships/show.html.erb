@@ -1,15 +1,28 @@
-<h1>Who would you like to play with?</h1>
+<head>
+  <link rel="stylesheet" href="assets/stylesheets/">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
 
-<% if current_user.friends.to_a.length === 0 %>
-  Please add a friend to begin
-<% else %>
-  <% current_user.friends.to_a.each do |f| %>
-    <div>
-      <%= f.email %>
-      <%= button_to 'Start Game', games_new_path(:friend_id => f.id) %>
+<body> 
+  <div class="friends-form mx-auto w-50" id="rcorners" style="width: 1000px;">
+  <h1>Who would you like to play with?</h1>
+
+    <% if current_user.friends.to_a.length === 0 %>
+      Please add a friend to begin
+    <% else %>
+      <% current_user.friends.to_a.each do |f| %>
+        <div class="names">
+          <%= f.email %>
+          <%= button_to 'Start Game', games_new_path(:friend_id => f.id) %>
+        </div>
+      <% end %> 
+    <% end %>
+
+    <div class ="add-a-friend">
+      <%= button_to 'Add a friend', '/friendships', method: :get %>
     </div>
-  <% end %> 
-<% end %>
+    
+  </div>
+</body>
 
 
-  <%= button_to 'Add a friend', '/friendships', method: :get %>

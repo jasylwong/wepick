@@ -1,0 +1,66 @@
+.header {
+  color: white;
+}
+
+.friends-form {
+  background-color: 0E2A47;
+  color: white;
+  border-radius: 15px;
+}
+
+label {
+  font-size: 15px;
+}
+
+.form-input-field {
+  border-radius: 5px;
+}
+
+.form-text {
+  color: #0E2A47;
+}
+
+.sign-up-button {
+  border-radius: 5px;
+  border-color: rgb(42, 124, 211);
+  background-color: rgb(42, 124, 211);
+  color: white;
+}
+
+.sign-up-button:hover {
+  background-color: #0E2A47;
+  border-color: #0E2A47;
+  cursor: pointer;
+}
+
+.i-you-pick {
+  color: white;
+}
+
+.we-pick {
+  color: #48ffD5;
+  font-size: 100px;
+  font-family: 'Righteous', cursive;
+}
+
+.names {
+  padding-left: 140px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  
+}
+
+.add-a-friend {
+  padding-left: 140px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+#rcorners {
+  border-radius: 25px;
+  border: 6px solid #48ffD5;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
