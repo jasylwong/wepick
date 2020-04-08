@@ -16,3 +16,21 @@
   color: white;
   width: 70%;
 }
+
+.like-dislike-container {
+  text-align: center;
+  left: 20%;
+}
+
+.dislike {
+  background-color: red;
+  float: left; 
+  width: 25%;
+  border-radius: 15%;
+}
+
+.like {
+  background-color: green;
+}
+
+
