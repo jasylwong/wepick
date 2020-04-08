@@ -1,19 +1,14 @@
-<head>
-  <link rel="stylesheet" href="assets/stylesheets/">
-  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-</head>
+<div>
+  <div style="float: left; width: 65vw;">
 
-<body>
-  <div>
-
-    <div class="header mx-auto w-25 p-3" style="width: 1000px;" align="center">
+    <div class="header mx-auto w-25 p-3" align="center">
       <h2>Sign up</h2>
     </div>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="sign-up-form mx-auto w-25 p-3" style="width: 1000px;" align="center">
+      <div class="sign-up-form mx-auto w-50 p-3" align="center">
 
         <div class="field form-text">
           <%= f.label :email %><br />
@@ -22,7 +17,7 @@
         <br>
 
         <div class="field form-text">
-          <%= f.label :password %>
+          <%= f.label :password %><br />
           <%= f.password_field :password, autocomplete: "new-password", class: "form-input-field" %>
         </div>
         <br>
@@ -40,22 +35,25 @@
         
       </div>
 
-      <div>
-
-        <div class="i-you-pick">
-          I pick
-        </div>
-
-        <div class="i-you-pick">
-          You pick
-        </div>
-
-        <div class="we-pick">
-          WePick
-        </div>
-
-      </div>
 
       <% end %>
   </div>
-</body>
+
+  <br><br><br>
+  <div style="float: left;">
+
+    <div class="i-you-pick">
+      I pick
+    </div><br><br><br>
+
+    <div class="i-you-pick">
+      You pick
+    </div><br><br><br>
+
+    <div class="we-pick">
+      WePick
+    </div>
+
+  </div>
+</div>
+

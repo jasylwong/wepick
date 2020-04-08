@@ -22,3 +22,7 @@ form {
   border-radius: 25px;
 }
 
+.test {
+  position: absolute;
+  right: 5vw;
+}
