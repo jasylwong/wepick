@@ -10,7 +10,7 @@ RSpec.feature 'disliking movies', type: :feature do
     click_button('Add a friend')
     click_button('Add friend', match: :first)
     click_button('Start Game')
-    click_button('Action')
+    click_link('Action')
     click_button('Dislike')
     click_button('Dislike')
     expect(MovieLike.count).to eq(0)

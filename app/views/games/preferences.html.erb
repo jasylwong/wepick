@@ -3,12 +3,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 
+<div class="genre-container">
 <div class="genre-message">
-    <%= session[:message] %>
+    <h2><%= session[:message] %></h2>
+    <h2>Please pick the same category</h2>
 </div>
 
-<div class="dropdown mx-auto" style="width: auto; text-align: center;">
-    <button class="dropbtn">Pick a category
+<div class="dropdown mx-auto">
+    <button class="dropbtn"><h2>Pick a category ▼<h2>
     <div class="dropdown-content">
         <%= link_to 'All', games_path(:genre => ""), method: :post %>
         <%= link_to 'Action', games_path(:genre => "Action"), method: :post%>
@@ -27,5 +29,6 @@
         <%= link_to 'Thriller', games_path(:genre => "Thriller"), method: :post %>
         <%= link_to 'War', games_path(:genre => "War"), method: :post %>
     </div>
+</div>
 </div>
 

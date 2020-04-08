@@ -12,13 +12,13 @@ RSpec.feature 'Resets to the first movie', type: :feature do
     click_button('Add a friend')
     click_button('Add friend', match: :first)
     click_button('Start Game')
-    click_button('Action')
+    click_link('Action')
     click_button('Dislike')
     click_button('Like')
     expect(page).to have_selector(:link_or_button, 'ReMatch')
     click_button('ReMatch')
     click_button('Start Game')
-    click_button('Action')
+    click_link('Action')
     expect(page).to have_content('James Bond 1')
   end 
 end

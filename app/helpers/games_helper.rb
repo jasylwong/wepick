@@ -18,7 +18,7 @@ module GamesHelper
 
   def genre_message(friend)
     if friend.current_genre_deck != ""
-      "#{friend.email} has chosen #{friend.current_genre_deck}\nPlease pick the same category"
+      "#{friend.email} has chosen '#{friend.current_genre_deck}'"
     else
       ""
     end

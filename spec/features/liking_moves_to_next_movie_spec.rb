@@ -9,7 +9,7 @@ RSpec.feature 'movie progression', type: :feature do
     click_button('Add a friend')
     click_button('Add friend', match: :first)
     click_button('Start Game')
-    click_button('Action')
+    click_link('Action')
     click_button('Like')
     expect(page).to have_content('James Bond 2')
     expect(page).to have_content('test description')

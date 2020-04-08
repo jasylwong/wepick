@@ -23,7 +23,7 @@ RSpec.feature 'Displaying genres', type: :feature do
     click_button('Add a friend')
     click_button('Add friend', match: :first)
     click_button('Start Game')
-    click_button('Action')
+    click_link('Action')
     expect(page).to have_content('Transformers')
   end
 
@@ -36,8 +36,8 @@ RSpec.feature 'Displaying genres', type: :feature do
     click_button('Add a friend')
     click_button('Add friend', match: :first)
     click_button('Start Game')
-    expect(page).to have_content("signin_test@example.com has chosen All, Please pick the same category")
-    click_button('All')
+    expect(page).to have_content("signin_test@example.com has chosen 'All'")
+    click_link('All')
     expect(page).to have_content('Lion King')
     click_button('Dislike')
     expect(page).to have_content('Transformers')
