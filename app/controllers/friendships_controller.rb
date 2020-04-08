@@ -13,7 +13,6 @@ class FriendshipsController < ApplicationController
     redirect_to '/friendships/show'
   end
 
-
   def index
     @users = User.all
   end
