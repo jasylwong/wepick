@@ -17,12 +17,12 @@ RSpec.feature 'adding friends', type: :feature do
 
   scenario 'User can not add someone they are already friends with' do
     sign_up('david@beckham.com', 'password')
-    click_button 'Sign Out'
+    click_on 'Sign Out'
     sign_up('victoria@beckham.com', 'password')
     click_button('Add a friend')
     expect(page).to have_content('david@beckham.com')
     click_button('Add friend', match: :first)
-    click_button 'Sign Out'
+    click_on 'Sign Out'
     log_in('victoria@beckham.com', 'password')
     expect(page).to have_content('david@beckham.com')
   end

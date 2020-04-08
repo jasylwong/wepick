@@ -16,12 +16,12 @@ RSpec.feature 'User can see users', type: :feature do
 
   scenario 'User can go straight to friends list only if already has friends' do
     sign_up('john@lennon.com', 'password')
-    click_button 'Sign Out'
+    click_on 'Sign Out'
     sign_up('yoko@ono.com', 'password')
     click_button('Add a friend')
     expect(page).to have_content('john@lennon.com')
     click_button('Add friend', match: :first)
-    click_button 'Sign Out'
+    click_on 'Sign Out'
     log_in('yoko@ono.com', 'password')
     click_button('Add a friend')
     expect(page).not_to have_content('john@lennon.com')
