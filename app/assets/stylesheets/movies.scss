@@ -1,3 +1,17 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.movie-container{
+  position: absolute;
+  background-color:white;
+  width: 80%;
+  left: 10%;
+  border: 5px #48ffd5 solid;
+  border-radius: 25px;
+  color: #0E2A47;
+}
+
+.movie-image{
+  height: 30vh;
+}
