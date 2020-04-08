@@ -33,6 +33,22 @@ label {
   cursor: pointer;
 }
 
+.add-a-friend-button {
+  height: 35px;
+  width: 150px;
+  border-radius: 5px;
+  border-color: rgb(47, 175, 145);
+  border: 2px solid;
+  background-color: rgb(47, 175, 145);
+  color: black;
+}
+
+.add-a-friend-button:hover {
+  height: 35px;
+  background-color: rgb(199, 255, 242);
+  border-color: rgb(199, 255, 242);
+  cursor: pointer;
+}
 .i-you-pick {
   color: white;
 }
