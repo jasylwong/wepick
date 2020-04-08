@@ -29,8 +29,8 @@ class GamesController < ApplicationController
     movie_counter = 0
     User.where(id: params[:user_id]).update_all(movie_counter: movie_counter, current_genre_deck: "")
     MovieLike.where(user_id: params[:user_id]).destroy_all
-    # User.where(id: session[:friend_id]).update_all(movie_counter: movie_counter, current_genre_deck: "")
-    # MovieLike.where(user_id: session[:friend_id]).destroy_all
+    User.where(id: session[:friend_id]).update_all(movie_counter: movie_counter, current_genre_deck: "")
+    MovieLike.where(user_id: session[:friend_id]).destroy_all
     redirect_to '/friendships/show'
   end
   # rubocop:enable Metrics/AbcSize
