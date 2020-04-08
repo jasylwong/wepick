@@ -25,7 +25,7 @@ RSpec.feature 'liking movies', type: :feature do
     click_button('Start Game')
     click_button('Action')
     click_button('Like')
-    click_button('Quit Game')
+    click_on('Quit Game')
     expect(current_path).to eq('/friendships/show')
   end
 end
