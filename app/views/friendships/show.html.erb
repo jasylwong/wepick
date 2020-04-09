@@ -13,7 +13,7 @@
       <% current_user.friends.to_a.each do |f| %>
         <div class="names">
           <%= f.email %>
-          <%= button_to 'Start Game', games_new_path(:friend_id => f.id), class: "friendships-button" %>
+          <%= button_to 'Start Matching', games_new_path(:friend_id => f.id), class: "friendships-button" %>
         </div>
       <% end %> 
     <% end %>
