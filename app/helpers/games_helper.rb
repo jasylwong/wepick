@@ -2,7 +2,9 @@ module GamesHelper
   def matcher(friend_id, movies_id_arr)
     if match?(friend_id)
       matched_movie = Movie.find(mutual_match(current_user.id, friend_id)[0])
-      where_to_watch = run_utelly(matched_movie.imdb_id)
+      where_to_watch = ""
+      # Remove the above line and uncomment the below line to reinstate 2nd API
+      # where_to_watch = run_utelly(matched_movie.imdb_id)
       ["You matched with #{friend_email(friend_id)}!", matched_movie, where_to_watch]
     else
       [nil, Movie.find(movies_id_arr[current_user.movie_counter])]
