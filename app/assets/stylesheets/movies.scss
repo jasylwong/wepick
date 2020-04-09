@@ -44,7 +44,7 @@
 }
 
 .dislike-button {
-  float: left;
+  // float: left;
   width: auto;
   height: 70px;
   background: url(https://cdn.shopify.com/s/files/1/1061/1924/products/Thumbs_Down_Sign_Emoji_Icon_ios10_compact.png?v=1571606114);
@@ -58,7 +58,7 @@
 }
 
 .like-button {
-  float: right;
+  // float: right;
   width: auto;
   height: 100px;
   background: url(https://cdn.shopify.com/s/files/1/1061/1924/products/Thumbs_Up_Sign_Emoji_Icon_ios10_compact.png?v=1571606114);
@@ -69,4 +69,12 @@
   padding-right: 30px;
   margin-right: 30%;
   margin-top: 4%;
+}
+
+.container {
+  display: flex; /* or inline-flex */
+  align-items: center;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
