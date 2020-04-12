@@ -5,7 +5,6 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4f0cfbe1fc185ef34e2c/test_coverage)](https://codeclimate.com/github/jasylwong/wepick)
 [![Heroku](https://pyheroku-badge.herokuapp.com/?app=wepick&style=flat)](https://wepick.herokuapp.com/)
 
-
 Contributors: [Josh Blumberg](https://github.com/jlblumberg) | [Jason Wong](https://github.com/jasylwong) | [Ellie Jones](https://github.com/EllieRichardsonJones) | [Joe Ellingworth](https://github.com/blu3skies) | [Hansa Lallu](https://github.com/hansa-lallu)
 __________________________________________________________________________________________________________________
 
@@ -13,15 +12,15 @@ ________________________________________________________________________________
 
 ## <a name="Outline">Outline</a>
 
-Work in a team of five to build a project of your choice.
+Work in a team of five to build a project of your choice. The timeline was two weeks, with a feature-freeze midway through the second week, and a live demo day at the end.
 
 ## <a name="Specifications">Specifications</a>
 
-As we were all abiding by social isolation, we decided to make an app which would help friends facilitate decision making while remote.
+Since this project took place during COVID-19, we decided to create a tool which would help friends facilitate social decision making while under isolation. This idea took form as an app that would help two people choose a film to watch.
 
 ## <a name="User_Stories">User Stories</a>
 
-User stories, which we designed from the specifications, can be found [here](https://docs.google.com/document/d/1GQxL08X9OiaRQS4eP1DW8j18zAJITgOzZBSF9FzqYNU/edit?usp=sharing).
+User stories, which we derived from the above specification, can be found [here](https://docs.google.com/document/d/1uC696OFk2QUIaG8aY9efZn51uHeYW4GYahW4U2CWzag/edit?usp=sharing).
 
 ## <a name="Installation_Instructions">Installation Instructions</a>
 
@@ -35,18 +34,24 @@ User stories, which we designed from the specifications, can be found [here](htt
 To set up the databases, run the following migration commands:
 
 ```
+rails db:create
+rails db:migrate
+```
+
+To populate the dabase with movie data, run the following command:
+
+```
 bin/rails db:create
-bin/rails db:migrate
 ```
 
 ### Running the site
 
 Development:
-- Run the server with command `bin/rails server`
-- Visit `localhost:3000` to use the site
+- Run the server with command `rails server`
+- Visit `localhost:3000` on your browswer to use the site
 
 Production:
-- Visit https://acebook-pingpong.herokuapp.com/
+- Visit https://wepick.herokuapp.com/
 
 ### Testing
 - Tests can be run using Rspec. Run the command `rspec`.
@@ -60,6 +65,8 @@ Back-end:
 - Ruby
 - Ruby On Rails
 - PostgreSQL
+- The Movie Database (TMDB) API for movie fetch and details [(about TMDB)](https://www.themoviedb.org/)
+- Utelly for information about where to watch [(about Utelly)](https://rapidapi.com/utelly/api/utelly)
 
 Testing:
 - RSpec
@@ -67,38 +74,54 @@ Testing:
 - Code Climate
 - Travis CI
 
+Hosting:
+- Heroku
+
 ## <a name="Example_use">Example use</a>
 
-Some screenshots of the different functionality of the site:
+You can see an example of the app in use here:
+
+INSERT YOUTUBE LINK
+
+Alternatively, here are some screenshots:
 
 The landing page prompts users to sign up or sign in
 
 ![landing page](https://i.imgur.com/FBKhPts.png)
 
-Doing so will take you to the timeline, which lists posts in reverse chronological order
+Doing so takes them to the friends page, where they can start a matching session
 
-![Timeline](https://i.imgur.com/EOt0FoK.png)
+![friends](https://i.imgur.com/EOt0FoK.png)
 
-You can click 'New Post' in the navbar to make new posts
+If they don't yet have any friends, they can add some
 
-![New Post](https://i.imgur.com/1XqR5dk.png)
+![add friend](https://i.imgur.com/1XqR5dk.png)
 
-Once you've made a post, you can edit or delete it for up to 10 minutes
+When they click to start a matching session with a friend, they can then choose a film genre (or select 'all')
 
-If you click on a user's name, it will take you to that persons profile, which will display their profile picture and their photos
+![genre choice](https://i.imgur.com/1XqR5dk.png)
 
-![Other User](https://i.imgur.com/gF5mccu.png)
+Their friend will be prompted to choose the same genre
 
-If you click on your own name, it will take you to your profile
+![other user genre choice](https://i.imgur.com/gF5mccu.png)
 
-![Your profile](https://i.imgur.com/aoMI4WQ.png)
+They will both be served a set of films (in the same order) according to their genre choice
 
-The 'Your Photos' navbar option takes you to a list of your photos. Here you can also edit, delete, and choose to make one of your photos your profile picture
+![deck](https://i.imgur.com/aoMI4WQ.png)
+
+When they have both clicked 'like' on the same film, they'll get a match
 
 ![Your photos](https://i.imgur.com/4jikYsu.png)
 
-You can sign out at any time by clicking the 'Sign Out' button in the navbar
+The users can quit that session or sign out entirely at any time using the links in the nav-bar
+
+![nav bar](https://i.imgur.com/4jikYsu.png)
 
 ## <a name="Future_work">Future work</a>
 
-On a revisit of the project, we would like to add functionality to comment on and like/unlike people's posts.
+On a revisit of the project, we would like to add the following features:
+- Dynamic and reactive styling device to device
+- Swipe to like and dislike on mobile
+- Links and logos for the resources within the where-to-watch feature
+- An about page and instructions embedded in the UI
+- Automated refresh of the films in the database
