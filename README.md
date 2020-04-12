@@ -1,9 +1,9 @@
 ### [Makers Academy](http://www.makersacademy.com) - Final Project
 
-[![Build Status](https://travis-ci.com/Peter2-71828/aceBook-PingPong.svg?branch=master)](https://travis-ci.com/Peter2-71828/aceBook-PingPong)
-[![Maintainability](https://api.codeclimate.com/v1/badges/4f0cfbe1fc185ef34e2c/maintainability)](https://codeclimate.com/github/Peter2-71828/aceBook-PingPong/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/4f0cfbe1fc185ef34e2c/test_coverage)](https://codeclimate.com/github/Peter2-71828/aceBook-PingPong/test_coverage)
-[![Heroku](https://pyheroku-badge.herokuapp.com/?app=acebook-pingpong&style=flat)](https://acebook-pingpong.herokuapp.com/)
+[![Build Status](https://travis-ci.com/jasylwong/wepick.svg?branch=master)](https://travis-ci.com/jasylwong/wepick)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4f0cfbe1fc185ef34e2c/maintainability)](https://codeclimate.com/github/jasylwong/wepick)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/4f0cfbe1fc185ef34e2c/test_coverage)](https://codeclimate.com/github/jasylwong/wepick)
+[![Heroku](https://pyheroku-badge.herokuapp.com/?app=wepick&style=flat)](https://wepick.herokuapp.com/)
 
 
 Contributors: [Josh Blumberg](https://github.com/jlblumberg) | [Jason Wong](https://github.com/jasylwong) | [Ellie Jones](https://github.com/EllieRichardsonJones) | [Joe Ellingworth](https://github.com/blu3skies) | [Hansa Lallu](https://github.com/hansa-lallu)
