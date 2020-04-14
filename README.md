@@ -41,7 +41,7 @@ rails db:migrate
 To populate the dabase with movie data, run the following command:
 
 ```
-bin/rails db:seed
+rails db:seed
 ```
 
 ### Running the site
