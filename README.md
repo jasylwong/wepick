@@ -12,11 +12,11 @@ ________________________________________________________________________________
 
 ## <a name="Outline">Outline</a>
 
-Work in a team of five to build a project of your choice. The timeline was two weeks, with a feature-freeze midway through the second week, and a live demo day at the end.
+We worked in a team of five to build a project of our choice. The timeline was two weeks, with a feature-freeze midway through the second week, and a live demo day at the end.
 
 ## <a name="Specifications">Specifications</a>
 
-Since this project took place during COVID-19, we decided to create a tool which would help friends facilitate social decision making while under isolation. This idea took form as an app that would help two people choose a film to watch.
+Because this project took place during COVID-19, we decided to create a tool which would help friends facilitate social decision making while under isolation. This idea took form as an app that would help two people choose a film to watch.
 
 ## <a name="User_Stories">User Stories</a>
 
@@ -81,41 +81,7 @@ Hosting:
 
 You can see an example of the app in use here:
 
-INSERT YOUTUBE LINK
-
-Alternatively, here are some screenshots:
-
-The landing page prompts users to sign up or sign in
-
-![landing page](https://i.imgur.com/FBKhPts.png)
-
-Doing so takes them to the friends page, where they can start a matching session
-
-![friends](https://i.imgur.com/EOt0FoK.png)
-
-If they don't yet have any friends, they can add some
-
-![add friend](https://i.imgur.com/1XqR5dk.png)
-
-When they click to start a matching session with a friend, they can then choose a film genre (or select 'all')
-
-![genre choice](https://i.imgur.com/1XqR5dk.png)
-
-Their friend will be prompted to choose the same genre
-
-![other user genre choice](https://i.imgur.com/gF5mccu.png)
-
-They will both be served a set of films (in the same order) according to their genre choice
-
-![deck](https://i.imgur.com/aoMI4WQ.png)
-
-When they have both clicked 'like' on the same film, they'll get a match
-
-![Your photos](https://i.imgur.com/4jikYsu.png)
-
-The users can quit that session or sign out entirely at any time using the links in the nav-bar
-
-![nav bar](https://i.imgur.com/4jikYsu.png)
+![usage gif](https://i.imgur.com/FiQy2qY.gifv)
 
 ## <a name="Future_work">Future work</a>
 
