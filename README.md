@@ -81,7 +81,7 @@ Hosting:
 
 You can see an example of the app in use here:
 
-![usage gif](https://i.imgur.com/FiQy2qY.gifv)
+[Imgur](https://i.imgur.com/FiQy2qY.gifv)
 
 ## <a name="Future_work">Future work</a>
 
