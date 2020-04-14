@@ -1,8 +1,8 @@
 ### [Makers Academy](http://www.makersacademy.com) - Final Project
 
 [![Build Status](https://travis-ci.com/jasylwong/wepick.svg?branch=master)](https://travis-ci.com/jasylwong/wepick)
-[![Maintainability](https://api.codeclimate.com/v1/badges/4f0cfbe1fc185ef34e2c/maintainability)](https://codeclimate.com/github/jasylwong/wepick)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/4f0cfbe1fc185ef34e2c/test_coverage)](https://codeclimate.com/github/jasylwong/wepick)
+[![Maintainability](https://api.codeclimate.com/v1/badges/07d019d848df139b41d8/maintainability)](https://codeclimate.com/github/jasylwong/wepick/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/07d019d848df139b41d8/test_coverage)](https://codeclimate.com/github/jasylwong/wepick/test_coverage)
 [![Heroku](https://pyheroku-badge.herokuapp.com/?app=wepick&style=flat)](https://wepick.herokuapp.com/)
 
 Contributors: [Josh Blumberg](https://github.com/jlblumberg) | [Jason Wong](https://github.com/jasylwong) | [Ellie Jones](https://github.com/EllieRichardsonJones) | [Joe Ellingworth](https://github.com/blu3skies) | [Hansa Lallu](https://github.com/hansa-lallu)
