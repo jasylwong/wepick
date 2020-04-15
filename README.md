@@ -1,3 +1,5 @@
+# WePick
+
 ### [Makers Academy](http://www.makersacademy.com) - Final Project
 
 [![Build Status](https://travis-ci.com/jasylwong/wepick.svg?branch=master)](https://travis-ci.com/jasylwong/wepick)
@@ -9,6 +11,8 @@ Contributors: [Josh Blumberg](https://github.com/jlblumberg) | [Jason Wong](http
 __________________________________________________________________________________________________________________
 
 [Outline](#Outline) | [Specifications](#Specifications) | [User stories](#User_stories) | [Accessing the app](#Accessing_the_app) | [Tech stack](#Tech_stack) | [Example use](#Example_use) | [Future work](#Future_work)
+
+An app for helping users decide what films to watch together. [Click here](https://wepick.herokuapp.com) to see the app in action.
 
 ## <a name="Outline">Outline</a>
 
@@ -38,7 +42,7 @@ UTELLY_KEY=another_long_string_of_characters
 
 ### Initial setup:
 
-- Clone this repo to your local machine and cd into it
+- Clone this repo to your local machine and `cd` into it
 - Run `gem install bundle` if you don't have bundler already
 - Install homebrew if you don't have it already -- instructions [here](brew.sh)
 - Run `brew install yarn` to install Yarn and Node
@@ -66,12 +70,13 @@ Development:
 - Visit `localhost:3000` on your browswer to use the site
 
 ### Testing
-- Tests can be run using Rspec. Run the command `rspec`.
+- Tests can be run using RSpec. Run the command `rspec`.
 
 ## <a name="Tech_stack">Tech stack</a>
 
 Front-end:
-- HTML & CSS
+- HTML
+- CSS (including Bootstrap)
 
 Back-end:
 - Ruby
