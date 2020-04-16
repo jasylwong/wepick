@@ -96,7 +96,9 @@ Hosting:
 
 ## <a name="Example_use">Example use</a>
 
-You can see an example of the app in use here:
+You can see an example of the app in use below.
+
+**Please note that due to Utelly rate limits, the Utelly API has been temporarily commented out in the source code. Users can still match as normal, but they won't be shown where they can stream the film. The GIF below is a demonstration of the app with both APIs included.**
 
 ![Imgur](https://i.imgur.com/8sRMy9E.gif)
 
