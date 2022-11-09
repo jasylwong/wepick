@@ -1,3 +1,10 @@
+***
+⚠️⚠️⚠️
+> When Heroku became paywalled, we decided to decommission the site. You can still explore the code and see how it used to look below.
+
+⚠️⚠️⚠️
+***
+
 # WePick
 
 ### [Makers Academy](http://www.makersacademy.com) - Final Project
